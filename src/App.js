@@ -1,36 +1,79 @@
 import React from 'react';
 import { Reset } from 'reset-css';
-import Leaf from './Leaf.svg'
+import Leaf from './icons/Leaf.svg';
+import Phone from './icons/Phone.svg';
+import Number1 from './icons/Number1.svg';
+import Amazon from './icons/Amazon.svg';
+import Logo from './icons/Logo.svg';
+import Twitter from './icons/Twitter.svg';
+import Facebook from './icons/Facebook.svg';
+import Instagram from './icons/Instagram.svg';
+import AppImage from './icons/App.png';
 
 
-import * as S from './style.js';
+import * as S from './style/style.js';
 
 function App() {
   return (
     <div style={{ height: '100vh', width: '100vw' }}>
       <S.Hero></S.Hero>
-      <img src={Leaf} />
       <S.Benefits>
         <S.Caption>
-          <S.TextBold>Why MyFit?</S.TextBold>
+          <S.TextHead>Why MyFit?</S.TextHead>
           <S.CaptionText>We are a UK company looking to revolutionise the way we workout! Resistance bands are cool - but they’re a lot cooler when they’ve been created and designed to allow you to replicate nearly all gym workouts. We’ve managed to create resistance from the comfort of your own home without compromising on your workout goals.</S.CaptionText>
         </S.Caption>
         <S.Content>
-          <S.Card>
+          <S.CardOne>
+            <img src={Leaf} />
+            <S.CardTextBold>MyFit resistance bands are made from 100% natural latex.</S.CardTextBold>
             <S.CardText>If you are allergic to latex, we would advise consulting.</S.CardText>
-          </S.Card>
-          <S.Card>
+          </S.CardOne>
+          <S.CardTwo>
+            <img src={Phone} />
+            <S.CardTextBold>Lorem ipsum dolor sit amet.</S.CardTextBold>
             <S.CardText>For the 2nd one, can you create a symbol that represents a phone, that box will be used to talk about the app.</S.CardText>
-          </S.Card>
-          <S.Card>
+          </S.CardTwo>
+          <S.CardThree>
+            <img src={Number1} />
+            <S.CardTextBold>Orci ipsum ultrices massa in sit ac lorem sit.</S.CardTextBold>
             <S.CardText>the symbol should be related to quality control, - represents ‘number 1’.</S.CardText>
-          </S.Card>
+          </S.CardThree>
         </S.Content>
       </S.Benefits>
       <S.VideoBlock></S.VideoBlock>
-      <S.App></S.App>
-      <S.Bottom></S.Bottom>
-      <S.Footer></S.Footer>
+      <S.App>
+        <img
+          src={AppImage}
+          style={{ width: 'calc(50vw - 64px)'}}
+        />
+        <S.GtA>
+          <S.AppHead>MyFit app</S.AppHead>
+          <S.CaptionText>The MyFit app is your go-to for all resistance workouts created by our own experts!</S.CaptionText>
+        </S.GtA>
+      </S.App>
+      <S.Bottom>
+        <S.TextHead>Order MyFit Now</S.TextHead>
+        <S.BottomText>Join us in the resistance workout revolution.</S.BottomText>
+        <S.Button onClick={() => alert('hey')}>Get Started</S.Button>
+        <img src={Amazon} />
+      </S.Bottom>
+      <S.Footer>
+        <S.Container>
+          <img src={Logo} />
+          <S.Menu>
+            <S.MenuButton>Products</S.MenuButton>
+            <S.MenuButton>App</S.MenuButton>
+            <S.MenuButton>Benefit</S.MenuButton>
+            <S.MenuButton>About Us</S.MenuButton>
+          </S.Menu>
+          <S.Socials>
+            <img src={Twitter} />
+            <img src={Facebook} />
+            <img src={Instagram} />
+          </S.Socials>
+        </S.Container>
+        <S.MyFitRight>© 2020 - MyFit, All right are reserved</S.MyFitRight>
+      </S.Footer>
     </div>
   );
 }
