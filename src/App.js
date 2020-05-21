@@ -1,5 +1,6 @@
 import React from 'react';
 import { Reset } from 'reset-css';
+
 import Leaf from './icons/Leaf.svg';
 import Phone from './icons/Phone.svg';
 import Number1 from './icons/Number1.svg';
@@ -9,6 +10,8 @@ import Twitter from './icons/Twitter.svg';
 import Facebook from './icons/Facebook.svg';
 import Instagram from './icons/Instagram.svg';
 import AppImage from './icons/App.png';
+import Dumbbell from './icons/Dumbbell.svg';
+
 
 
 import * as S from './style/style.js';
@@ -46,15 +49,30 @@ function App() {
           src={AppImage}
           style={{ width: 'calc(50vw - 64px)'}}
         />
-        <S.GtA>
+        <S.CtA>
           <S.AppHead>MyFit app</S.AppHead>
           <S.CaptionText>The MyFit app is your go-to for all resistance workouts created by our own experts!</S.CaptionText>
-        </S.GtA>
+          <S.WorkoutCard>
+            <img src={Dumbbell} />
+            <S.Framed>
+              <S.AppTextBold>Workout Videos</S.AppTextBold>
+              <S.CardText>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut aliqua.</S.CardText>
+            </S.Framed>
+          </S.WorkoutCard>
+          <S.CombosCard>
+            <img src={Dumbbell} />
+            <S.Framed>
+              <S.AppTextBold>Combos Workout</S.AppTextBold>
+              <S.CardText>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut aliqua.</S.CardText>
+            </S.Framed>
+          </S.CombosCard>
+          <S.AppButton href='https://www.amazon.com/'>Go to Application</S.AppButton>
+        </S.CtA>
       </S.App>
       <S.Bottom>
         <S.TextHead>Order MyFit Now</S.TextHead>
         <S.BottomText>Join us in the resistance workout revolution.</S.BottomText>
-        <S.Button onClick={() => alert('hey')}>Get Started</S.Button>
+        <S.OrderButton href='https://www.amazon.com/'>Get Started</S.OrderButton>
         <img src={Amazon} />
       </S.Bottom>
       <S.Footer>

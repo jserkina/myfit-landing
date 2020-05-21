@@ -11,6 +11,18 @@ import {
   SOFT_ORANGE
 } from './colors.js'
 
+
+export const Button = styled.a`
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 134.7%;
+  color: ${WHITE};
+  text-align: center;
+  background: ${PRIMARY};
+  border-radius: 8px;
+  text-decoration: none;
+`
+
 export const Hero = styled.div``
 
 export const Benefits = styled.div`
@@ -96,8 +108,12 @@ export const App = styled.div`
   align-items: center;
 `
 
-export const GtA = styled.div`
+export const CtA = styled.div`
   margin-left: 118px;
+  width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 `
 
 export const AppHead = styled.h3`
@@ -107,6 +123,39 @@ export const AppHead = styled.h3`
   letter-spacing: 0.05em;
   text-transform: capitalize;
   color: ${BLACK};
+`
+
+export const AppCard = styled.div`
+  padding: 20px 24px;
+  border-radius: 8px;
+  display: flex;
+`
+
+export const WorkoutCard = styled(AppCard)`
+  background: ${SOFT_ORANGE};
+  margin-top: 40px;
+`
+
+export const CombosCard = styled(AppCard)`
+  background: #F8F8F8;
+  margin-top: 16px;
+  margin-bottom: 48px;
+`
+
+export const Framed = styled.div`
+  margin-left: 24px;
+`
+
+export const AppTextBold = styled.p`
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  color: ${BLACK};
+  margin-bottom: 4px;
+`
+
+export const AppButton = styled(Button)`
+  padding: 17px 16px;
 `
 
 export const Bottom = styled.div`
@@ -126,16 +175,10 @@ export const BottomText = styled.p`
   margin-top: 8px;
 `
 
-export const Button = styled.button`
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 134.7%;
-  color: ${WHITE};
-  text-align: center;
-  background: ${PRIMARY};
-  border-radius: 8px;
+export const OrderButton = styled(Button)`
   padding: 17px 24px;
   margin: 32px 0px 16px;
+
 `
 
 export const Footer = styled.div`
