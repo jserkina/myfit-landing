@@ -12,6 +12,67 @@ import {
 } from './colors.js'
 
 
+
+export const Hero = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 720px;
+`
+
+export const MenuBlockLight = styled.div`
+  width: 81vw;;
+  height: 720px;
+  background: ${SOFT_ORANGE};
+  opacity: 0.5;
+  border-radius: 8px;
+  transform: rotate(3deg);
+  align-self: start;
+  position: absolute;
+  top: -70px;
+  left: 63.68px;
+`
+
+export const MenuBlock = styled.div`
+  width: 81vw;;
+  height: 740px;
+  background: ${SOFT_ORANGE};
+  border-radius: 8px;
+  transform: rotate(-3deg);
+  align-self: center;
+  position: absolute;
+  top: -60px;
+`
+
+export const Box = styled.div`
+  align-self: center;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  align-items: start;
+`
+
+
+export const NavigationMenu = styled.div`
+  padding: 28px 0px;
+  display: flex;
+  align-items: center;
+`
+
+export const Menu = styled.div`
+  width: 374px;
+  display: flex;
+  justify-content: space-between;
+  color: ${BLACK};
+  margin: 0px 432px 0px 112px;
+`
+
+export const MenuButton = styled.div`
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+`
+
 export const Button = styled.a`
   font-weight: bold;
   font-size: 16px;
@@ -21,9 +82,52 @@ export const Button = styled.a`
   background: ${PRIMARY};
   border-radius: 8px;
   text-decoration: none;
+  padding: 17px 24px;
 `
 
-export const Hero = styled.div``
+export const ButtonSecondary = styled.a`
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 143%;
+  color: ${PRIMARY};
+  display: flex;
+  align-items: center;
+  background: rgba(250, 69, 4, 0.2);
+  border-radius: 8px;
+  text-decoration: none;
+  padding: 17px 24px;
+`
+
+export const AmazonButton = styled.a`
+  background: rgba(250, 69, 4, 0.2);
+  border-radius: 8px;
+  text-decoration: none;
+  padding: 22px 56px 14px;
+  margin-left: 20px;
+`
+
+export const HeroCTA = styled.div`
+  width: 579px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 176px;
+`
+
+export const HeroHead = styled.h1`
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: 0.05em;
+  text-transform: capitalize;
+  color: ${BLACK};
+`
+
+export const HeroButtons = styled.div`
+  margin-top: 40px;
+  display: flex;
+`
+
 
 export const Benefits = styled.div`
   padding: 120px 0px;
@@ -100,7 +204,56 @@ export const CardText = styled.p`
   color: ${BLACK};
 `
 
-export const VideoBlock = styled.div``
+
+export const VideoBlock = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: relative;
+`
+
+export const LightBlock = styled.div`
+  width: 61.5vw;;
+  height: 720px;
+  background: ${SOFT_ORANGE};
+  border-radius: 8px;
+  transform: rotate(3deg);
+  align-self: center;
+`
+
+export const DarkBlock = styled.div`
+  width: 55vw;
+  height: 598px;
+  background: ${BLACK};
+  position: absolute;
+  bottom: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
+export const VideoCTA = styled.div`
+  width: 324px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+`
+
+export const VideoHead = styled.h2`
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 50px;
+  letter-spacing: 0.05em;
+  text-transform: capitalize;
+  color: ${WHITE};
+`
+
+export const VideoText = styled.p`
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: ${GREY};
+  margin: 12px 0px 48px;
+`
 
 export const App = styled.div`
   padding: 80px 0px 80px 64px;
@@ -108,7 +261,7 @@ export const App = styled.div`
   align-items: center;
 `
 
-export const CtA = styled.div`
+export const AppCTA = styled.div`
   margin-left: 118px;
   width: 480px;
   display: flex;
@@ -154,10 +307,6 @@ export const AppTextBold = styled.p`
   margin-bottom: 4px;
 `
 
-export const AppButton = styled(Button)`
-  padding: 17px 16px;
-`
-
 export const Bottom = styled.div`
   background: ${SOFT_ORANGE};
   width: 100vw;
@@ -176,7 +325,6 @@ export const BottomText = styled.p`
 `
 
 export const OrderButton = styled(Button)`
-  padding: 17px 24px;
   margin: 32px 0px 16px;
 
 `
@@ -195,17 +343,11 @@ export const Container = styled.div`
   align-items: center;
 `
 
-export const Menu = styled.div`
+export const MenuFooter = styled.div`
   width: 374px;
   display: flex;
   justify-content: space-between;
   margin: 0px 275px 0px 375px;
-`
-
-export const MenuButton = styled.div`
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 18px;
   color: ${WHITE};
 `
 

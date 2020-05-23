@@ -5,12 +5,17 @@ import Leaf from './icons/Leaf.svg';
 import Phone from './icons/Phone.svg';
 import Number1 from './icons/Number1.svg';
 import Amazon from './icons/Amazon.svg';
+import AmazonName from './icons/AmazonName.svg';
 import Logo from './icons/Logo.svg';
+import LogoBig from './icons/LogoBig.svg';
+import Play from './icons/Play.svg';
 import Twitter from './icons/Twitter.svg';
 import Facebook from './icons/Facebook.svg';
 import Instagram from './icons/Instagram.svg';
 import AppImage from './icons/App.png';
 import Dumbbell from './icons/Dumbbell.svg';
+import Video from './icons/Video.png';
+import MenuHero from './icons/MenuHero.png'
 
 
 
@@ -19,7 +24,43 @@ import * as S from './style/style.js';
 function App() {
   return (
     <div style={{ height: '100vh', width: '100vw' }}>
-      <S.Hero></S.Hero>
+      <S.Hero>
+        <S.MenuBlockLight></S.MenuBlockLight>
+        <S.MenuBlock></S.MenuBlock>
+        <img
+          src={MenuHero}
+          style={{
+            width: '45vw',
+            position: 'absolute',
+            right: '0',
+          }}
+        />
+        <S.Box>
+          <S.NavigationMenu>
+            <img src={LogoBig} />
+            <S.Menu>
+              <S.MenuButton>Products</S.MenuButton>
+              <S.MenuButton>App</S.MenuButton>
+              <S.MenuButton>Benefit</S.MenuButton>
+              <S.MenuButton>About Us</S.MenuButton>
+            </S.Menu>
+            <S.ButtonSecondary href='https://www.amazon.com/'>
+              <img src={Play} style={{ marginRight: '8px'}}/>
+              Watch Demo
+            </S.ButtonSecondary>
+          </S.NavigationMenu>
+          <S.HeroCTA>
+            <S.HeroHead>The Resistance Workout Revolution</S.HeroHead>
+            <S.CaptionText>Resistance bands are cool - but they’re a lot cooler when they’ve been created and designed to allow you to replicate nearly all gym workouts.</S.CaptionText>
+            <S.HeroButtons>
+              <S.Button>Explore More</S.Button>
+              <S.AmazonButton>
+                <img src={AmazonName} />
+              </S.AmazonButton>
+            </S.HeroButtons>
+          </S.HeroCTA>
+        </S.Box>
+      </S.Hero>
       <S.Benefits>
         <S.Caption>
           <S.TextHead>Why MyFit?</S.TextHead>
@@ -43,13 +84,32 @@ function App() {
           </S.CardThree>
         </S.Content>
       </S.Benefits>
-      <S.VideoBlock></S.VideoBlock>
+      <S.VideoBlock>
+        <S.LightBlock></S.LightBlock>
+        <S.DarkBlock>
+          <S.VideoCTA>
+            <S.VideoHead>Explore</S.VideoHead>
+            <S.VideoText>We’ve managed to create resistance from the comfort of your own home without compromising on your workout goals.</S.VideoText>
+            <S.Button href='https://www.amazon.com/'>Explore More</S.Button>
+          </S.VideoCTA>
+        </S.DarkBlock>
+        <img
+          src={Video}
+          style={{
+            width: '61.5vw',
+            height: '100%',
+            position: 'absolute',
+            right: '0',
+            objectFit: 'contain',
+          }}
+        />
+      </S.VideoBlock>
       <S.App>
         <img
           src={AppImage}
           style={{ width: 'calc(50vw - 64px)'}}
         />
-        <S.CtA>
+        <S.AppCTA>
           <S.AppHead>MyFit app</S.AppHead>
           <S.CaptionText>The MyFit app is your go-to for all resistance workouts created by our own experts!</S.CaptionText>
           <S.WorkoutCard>
@@ -66,8 +126,8 @@ function App() {
               <S.CardText>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut aliqua.</S.CardText>
             </S.Framed>
           </S.CombosCard>
-          <S.AppButton href='https://www.amazon.com/'>Go to Application</S.AppButton>
-        </S.CtA>
+          <S.Button href='https://www.amazon.com/'>Go to Application</S.Button>
+        </S.AppCTA>
       </S.App>
       <S.Bottom>
         <S.TextHead>Order MyFit Now</S.TextHead>
@@ -78,12 +138,12 @@ function App() {
       <S.Footer>
         <S.Container>
           <img src={Logo} />
-          <S.Menu>
+          <S.MenuFooter>
             <S.MenuButton>Products</S.MenuButton>
             <S.MenuButton>App</S.MenuButton>
             <S.MenuButton>Benefit</S.MenuButton>
             <S.MenuButton>About Us</S.MenuButton>
-          </S.Menu>
+          </S.MenuFooter>
           <S.Socials>
             <img src={Twitter} />
             <img src={Facebook} />
