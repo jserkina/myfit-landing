@@ -138,18 +138,18 @@ function App() {
       <S.Footer>
         <S.Container>
           <img src={Logo} />
-          <S.MenuFooter>
-            <S.MenuButton>Products</S.MenuButton>
-            <S.MenuButton>App</S.MenuButton>
-            <S.MenuButton>Benefit</S.MenuButton>
-            <S.MenuButton>About Us</S.MenuButton>
-          </S.MenuFooter>
           <S.Socials>
             <img src={Twitter} />
             <img src={Facebook} />
             <img src={Instagram} />
           </S.Socials>
         </S.Container>
+        <S.MenuFooter>
+          <S.MenuButton>Products</S.MenuButton>
+          <S.MenuButton>App</S.MenuButton>
+          <S.MenuButton>Benefit</S.MenuButton>
+          <S.MenuButton>About Us</S.MenuButton>
+        </S.MenuFooter>
         <S.MyFitRight>© 2020 - MyFit, All right are reserved</S.MyFitRight>
       </S.Footer>
     </div>

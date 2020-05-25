@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from './device.js';
 
 import {
   BLACK,
@@ -51,7 +52,6 @@ export const Box = styled.div`
   flex-direction: column;
   align-items: start;
 `
-
 
 export const NavigationMenu = styled.div`
   padding: 28px 0px;
@@ -162,7 +162,12 @@ export const Content = styled.div`
   align-items: center;
   display: flex;
   margin-top: 64px;
+  @media ${device.tablet} {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 `
+
 
 export const Card = styled.div`
   display: flex;
@@ -172,6 +177,7 @@ export const Card = styled.div`
   width: 276px;
   padding: 0px 32px;
 `
+
 export const CardOne = styled(Card)`
   background: ${SOFT_ORANGE};
   border-radius: 8px;
@@ -181,11 +187,18 @@ export const CardTwo = styled(Card)`
   background: ${SOFT_PINK};
   border-radius: 8px;
   margin: 0px 80px;
+  @media ${device.tablet} {
+    margin-left: 40px;
+    margin-right: 0px;
+  }
 `
 
 export const CardThree = styled(Card)`
   background: ${SOFT_YELLOW};
   border-radius: 8px;
+  @media ${device.tablet} {
+    margin-top: 40px;
+  }
 `
 
 export const CardTextBold = styled.p`
@@ -341,6 +354,9 @@ export const Footer = styled.div`
 export const Container = styled.div`
   display: flex;
   align-items: center;
+  width: 100vw;
+  justify-content: space-between;
+  /*margin-bottom: 32px;*/
 `
 
 export const MenuFooter = styled.div`
