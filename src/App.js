@@ -12,7 +12,7 @@ import Play from './icons/Play.svg';
 import Twitter from './icons/Twitter.svg';
 import Facebook from './icons/Facebook.svg';
 import Instagram from './icons/Instagram.svg';
-import AppImage from './icons/App.png';
+import Image from './icons/App.png';
 import Dumbbell from './icons/Dumbbell.svg';
 import Video from './icons/Video.png';
 import MenuHero from './icons/MenuHero.png'
@@ -23,7 +23,7 @@ import * as S from './style/style.js';
 
 function App() {
   return (
-    <div style={{ height: '100vh', width: '100vw' }}>
+    <S.Bg>
       <S.Hero>
         <S.MenuBlockLight></S.MenuBlockLight>
         <S.MenuBlock></S.MenuBlock>
@@ -44,17 +44,17 @@ function App() {
               <S.MenuButton>Benefit</S.MenuButton>
               <S.MenuButton>About Us</S.MenuButton>
             </S.Menu>
-            <S.ButtonSecondary href='https://www.amazon.com/'>
+            <S.ButtonDemo href='https://www.amazon.com/'>
               <img src={Play} style={{ marginRight: '8px'}}/>
               Watch Demo
-            </S.ButtonSecondary>
+            </S.ButtonDemo>
           </S.NavigationMenu>
           <S.HeroCTA>
             <S.HeroHead>The Resistance Workout Revolution</S.HeroHead>
             <S.CaptionText>Resistance bands are cool - but they’re a lot cooler when they’ve been created and designed to allow you to replicate nearly all gym workouts.</S.CaptionText>
             <S.HeroButtons>
-              <S.Button>Explore More</S.Button>
-              <S.AmazonButton>
+              <S.ButtonPrimary href='https://www.amazon.com/'>Explore More</S.ButtonPrimary>
+              <S.AmazonButton href='https://www.amazon.com/'>
                 <img src={AmazonName} />
               </S.AmazonButton>
             </S.HeroButtons>
@@ -90,43 +90,35 @@ function App() {
           <S.VideoCTA>
             <S.VideoHead>Explore</S.VideoHead>
             <S.VideoText>We’ve managed to create resistance from the comfort of your own home without compromising on your workout goals.</S.VideoText>
-            <S.Button href='https://www.amazon.com/'>Explore More</S.Button>
+            <S.ButtonPrimary href='https://www.amazon.com/'>Explore More</S.ButtonPrimary>
           </S.VideoCTA>
         </S.DarkBlock>
-        <img
-          src={Video}
-          style={{
-            width: '61.5vw',
-            height: '100%',
-            position: 'absolute',
-            right: '0',
-            objectFit: 'contain',
-          }}
-        />
+        <S.VideoStyle src={Video}/>
       </S.VideoBlock>
       <S.App>
-        <img
-          src={AppImage}
-          style={{ width: 'calc(50vw - 64px)'}}
-        />
+        <S.AppImage src={Image}/>
         <S.AppCTA>
-          <S.AppHead>MyFit app</S.AppHead>
-          <S.CaptionText>The MyFit app is your go-to for all resistance workouts created by our own experts!</S.CaptionText>
-          <S.WorkoutCard>
-            <img src={Dumbbell} />
-            <S.Framed>
-              <S.AppTextBold>Workout Videos</S.AppTextBold>
-              <S.CardText>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut aliqua.</S.CardText>
-            </S.Framed>
-          </S.WorkoutCard>
-          <S.CombosCard>
-            <img src={Dumbbell} />
-            <S.Framed>
-              <S.AppTextBold>Combos Workout</S.AppTextBold>
-              <S.CardText>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut aliqua.</S.CardText>
-            </S.Framed>
-          </S.CombosCard>
-          <S.Button href='https://www.amazon.com/'>Go to Application</S.Button>
+          <S.FramedHead>
+            <S.AppHead>MyFit app</S.AppHead>
+            <S.CaptionText>The MyFit app is your go-to for all resistance workouts created by our own experts!</S.CaptionText>
+          </S.FramedHead>
+          <S.AppBox>
+            <S.WorkoutCard>
+              <img src={Dumbbell} />
+              <S.Framed>
+                <S.AppTextBold>Workout Videos</S.AppTextBold>
+                <S.CardText>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut aliqua.</S.CardText>
+              </S.Framed>
+            </S.WorkoutCard>
+            <S.CombosCard>
+              <img src={Dumbbell} />
+              <S.Framed>
+                <S.AppTextBold>Combos Workout</S.AppTextBold>
+                <S.CardText>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut aliqua.</S.CardText>
+              </S.Framed>
+            </S.CombosCard>
+          </S.AppBox>
+          <S.ButtonPrimary href='https://www.amazon.com/'>Go to Application</S.ButtonPrimary>
         </S.AppCTA>
       </S.App>
       <S.Bottom>
@@ -152,7 +144,7 @@ function App() {
         </S.MenuFooter>
         <S.MyFitRight>© 2020 - MyFit, All right are reserved</S.MyFitRight>
       </S.Footer>
-    </div>
+    </S.Bg>
   );
 }
 

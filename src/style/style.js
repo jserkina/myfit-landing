@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { device } from './device.js';
 
+
 import {
   BLACK,
   DARK_GREY,
@@ -13,6 +14,10 @@ import {
 } from './colors.js'
 
 
+export const Bg = styled.div`
+  height: 100vh;
+  width: 100vw;
+`
 
 export const Hero = styled.div`
   display: flex;
@@ -73,7 +78,7 @@ export const MenuButton = styled.div`
   line-height: 18px;
 `
 
-export const Button = styled.a`
+export const ButtonPrimary = styled.a`
   font-weight: bold;
   font-size: 16px;
   line-height: 134.7%;
@@ -85,7 +90,7 @@ export const Button = styled.a`
   padding: 17px 24px;
 `
 
-export const ButtonSecondary = styled.a`
+export const ButtonDemo = styled.a`
   font-weight: bold;
   font-size: 14px;
   line-height: 143%;
@@ -130,15 +135,21 @@ export const HeroButtons = styled.div`
 
 
 export const Benefits = styled.div`
-  padding: 120px 0px;
+  margin: 120px 0px;
   text-align: center;
   display: flex;
   align-items: center;
   flex-direction: column;
+  @media ${device.tablet} {
+    margin: 80px 40px 64px;
+  }
 `
 
 export const Caption = styled.div`
   width: 780px;
+  @media ${device.tablet} {
+    width: 100%;
+  }
 `
 
 export const TextHead = styled.h2`
@@ -176,6 +187,9 @@ export const Card = styled.div`
   height: 210px;
   width: 276px;
   padding: 0px 32px;
+  @media ${device.tablet} {
+    padding: 0px 24px;
+  }
 `
 
 export const CardOne = styled(Card)`
@@ -222,6 +236,9 @@ export const VideoBlock = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
+  @media ${device.tablet} {
+    padding: 53px 34px;
+  }
 `
 
 export const LightBlock = styled.div`
@@ -231,6 +248,11 @@ export const LightBlock = styled.div`
   border-radius: 8px;
   transform: rotate(3deg);
   align-self: center;
+  @media ${device.tablet} {
+    width: 640px;
+    height: 868px;
+    transform: rotate(4deg);
+  }
 `
 
 export const DarkBlock = styled.div`
@@ -242,6 +264,25 @@ export const DarkBlock = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media ${device.tablet} {
+    height: 342px;
+    width: 640px;
+    top: 86px;
+    left: 64px;
+    border-radius: 8px;
+  }
+`
+
+export const VideoStyle = styled.img`
+  width: 61.5vw;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  object-fit: contain;
+  @media ${device.tablet} {
+    width: 100vw;
+    bottom: -168px;
+  }
 `
 
 export const VideoCTA = styled.div`
@@ -249,6 +290,11 @@ export const VideoCTA = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  @media ${device.tablet} {
+    align-items: center;
+    width: 482px;
+    text-align: center;
+  }
 `
 
 export const VideoHead = styled.h2`
@@ -272,6 +318,18 @@ export const App = styled.div`
   padding: 80px 0px 80px 64px;
   display: flex;
   align-items: center;
+  @media ${device.tablet} {
+    flex-direction: column-reverse;
+    padding: 80px 0px 120px;
+  }
+`
+
+export const AppImage = styled.img`
+  width: calc(50vw - 64px);
+  @media ${device.tablet} {
+    width: 100%;
+    margin-top: 120px;
+  }
 `
 
 export const AppCTA = styled.div`
@@ -280,6 +338,18 @@ export const AppCTA = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  @media ${device.tablet} {
+    align-items: center;
+    width: 100%;
+    margin: 0px;
+  }
+`
+
+export const FramedHead = styled.div`
+  @media ${device.tablet} {
+    text-align: center;
+    width: 61vw;
+  }
 `
 
 export const AppHead = styled.h3`
@@ -290,22 +360,34 @@ export const AppHead = styled.h3`
   text-transform: capitalize;
   color: ${BLACK};
 `
+export const AppBox = styled.div`
+  margin: 40px 0px 48px;
+  @media ${device.tablet} {
+    display: flex;
+    margin: 40px 40px 56px;
+  }
+`
 
 export const AppCard = styled.div`
   padding: 20px 24px;
   border-radius: 8px;
   display: flex;
+  @media ${device.tablet} {
+    padding: 20px 20px 20px 25px;
+  }
 `
 
 export const WorkoutCard = styled(AppCard)`
   background: ${SOFT_ORANGE};
-  margin-top: 40px;
 `
 
 export const CombosCard = styled(AppCard)`
   background: #F8F8F8;
   margin-top: 16px;
-  margin-bottom: 48px;
+  @media ${device.tablet} {
+    margin-top: 0px;
+    margin-left: 20px;
+  }
 `
 
 export const Framed = styled.div`
@@ -337,7 +419,7 @@ export const BottomText = styled.p`
   margin-top: 8px;
 `
 
-export const OrderButton = styled(Button)`
+export const OrderButton = styled(ButtonPrimary)`
   margin: 32px 0px 16px;
 
 `
@@ -354,17 +436,23 @@ export const Footer = styled.div`
 export const Container = styled.div`
   display: flex;
   align-items: center;
-  width: 100vw;
+  width: 61.5vw;
   justify-content: space-between;
-  /*margin-bottom: 32px;*/
+  position: absolute;
+  @media ${device.tablet} {
+    margin-bottom: 32px;
+    width: calc(100vw - 80px);
+    position: static;
+  }
 `
 
 export const MenuFooter = styled.div`
   width: 374px;
   display: flex;
   justify-content: space-between;
-  margin: 0px 275px 0px 375px;
   color: ${WHITE};
+  align-items: center;
+  height: 32px;
 `
 
 export const Socials = styled.div`
