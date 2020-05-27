@@ -24,6 +24,10 @@ export const Hero = styled.div`
   flex-direction: column;
   position: relative;
   height: 720px;
+  @media ${device.tablet} {
+    background: ${BLACK};
+    height: 1204px;
+  }
 `
 
 export const MenuBlockLight = styled.div`
@@ -37,6 +41,13 @@ export const MenuBlockLight = styled.div`
   position: absolute;
   top: -70px;
   left: 63.68px;
+  @media ${device.tablet} {
+    transform: rotate(6deg);
+    width: 768px;
+    height: 448px;
+    top: 45px;
+    left: -36px;
+  }
 `
 
 export const MenuBlock = styled.div`
@@ -48,6 +59,23 @@ export const MenuBlock = styled.div`
   align-self: center;
   position: absolute;
   top: -60px;
+  @media ${device.tablet} {
+    transform: rotate(-6deg);
+    height: 611.71px;
+    width: 824.02px;
+    top: -124px;
+    left: -16px;
+  }
+`
+
+export const MenuImage = styled.img`
+  width: 45vw;
+  position: absolute;
+  right: 0;
+  @media ${device.tablet} {
+    width: 684px;
+    top: 531px;
+  }
 `
 
 export const Box = styled.div`
@@ -59,9 +87,12 @@ export const Box = styled.div`
 `
 
 export const NavigationMenu = styled.div`
-  padding: 28px 0px;
+  padding: 16px 0px;
   display: flex;
   align-items: center;
+  @media ${device.tablet} {
+    padding: 16px 0px 0px;
+  }
 `
 
 export const Menu = styled.div`
@@ -70,6 +101,11 @@ export const Menu = styled.div`
   justify-content: space-between;
   color: ${BLACK};
   margin: 0px 432px 0px 112px;
+  @media ${device.tablet} {
+    width: 305px;
+    margin: 0px 40px 0px 85px;
+  }
+
 `
 
 export const MenuButton = styled.div`
@@ -101,6 +137,9 @@ export const ButtonDemo = styled.a`
   border-radius: 8px;
   text-decoration: none;
   padding: 17px 24px;
+  @media ${device.tablet} {
+    padding: 14px 16px;
+  }
 `
 
 export const AmazonButton = styled.a`
@@ -117,6 +156,12 @@ export const HeroCTA = styled.div`
   flex-direction: column;
   align-items: flex-start;
   margin-top: 176px;
+  @media ${device.tablet} {
+    text-align: center;
+    align-items: center;
+    margin-top: 80px;
+    align-self: center;
+  }
 `
 
 export const HeroHead = styled.h1`

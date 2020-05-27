@@ -1,5 +1,5 @@
 import React from 'react';
-import { Reset } from 'reset-css';
+import Reset from 'reset-css';
 
 import Leaf from './icons/Leaf.svg';
 import Phone from './icons/Phone.svg';
@@ -15,6 +15,7 @@ import Instagram from './icons/Instagram.svg';
 import Image from './icons/App.png';
 import Dumbbell from './icons/Dumbbell.svg';
 import Video from './icons/Video.png';
+import PlayVideo from './icons/PlayVideo.svg';
 import MenuHero from './icons/MenuHero.png'
 
 
@@ -27,14 +28,7 @@ function App() {
       <S.Hero>
         <S.MenuBlockLight></S.MenuBlockLight>
         <S.MenuBlock></S.MenuBlock>
-        <img
-          src={MenuHero}
-          style={{
-            width: '45vw',
-            position: 'absolute',
-            right: '0',
-          }}
-        />
+        <S.MenuImage src={MenuHero} alt='Man is running' />
         <S.Box>
           <S.NavigationMenu>
             <img src={LogoBig} />
@@ -93,10 +87,10 @@ function App() {
             <S.ButtonPrimary href='https://www.amazon.com/'>Explore More</S.ButtonPrimary>
           </S.VideoCTA>
         </S.DarkBlock>
-        <S.VideoStyle src={Video}/>
+        <S.VideoStyle src={Video} alt='Video'/>
       </S.VideoBlock>
       <S.App>
-        <S.AppImage src={Image}/>
+        <S.AppImage src={Image} alt='MyFit App'/>
         <S.AppCTA>
           <S.FramedHead>
             <S.AppHead>MyFit app</S.AppHead>
