@@ -8,7 +8,9 @@ import Amazon from './icons/Amazon.svg';
 import AmazonName from './icons/AmazonName.svg';
 import Logo from './icons/Logo.svg';
 import LogoBig from './icons/LogoBig.svg';
+import LogoWhite from './icons/LogoWhite.svg';
 import Play from './icons/Play.svg';
+import MenuPlay from './icons/MenuPlay.svg';
 import Twitter from './icons/Twitter.svg';
 import Facebook from './icons/Facebook.svg';
 import Instagram from './icons/Instagram.svg';
@@ -30,6 +32,10 @@ function App() {
         <S.MenuBlock></S.MenuBlock>
         <S.MenuImage src={MenuHero} alt='Man is running' />
         <S.Box>
+          <S.MobileMenu>
+            <img src={LogoWhite} />
+            <img src={MenuPlay} />
+          </S.MobileMenu>
           <S.NavigationMenu>
             <img src={LogoBig} />
             <S.Menu>

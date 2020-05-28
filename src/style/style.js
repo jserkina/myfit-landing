@@ -24,9 +24,13 @@ export const Hero = styled.div`
   flex-direction: column;
   position: relative;
   height: 720px;
+  overflow: hidden;
   @media ${device.tablet} {
     background: ${BLACK};
     height: 1204px;
+  }
+  @media ${device.mobileM} {
+    height: 1000px;
   }
 `
 
@@ -48,6 +52,13 @@ export const MenuBlockLight = styled.div`
     top: 45px;
     left: -36px;
   }
+  @media ${device.mobileM} {
+    width: 500px;
+    height: 500px;
+    opacity: 0.7;
+    left: -103px;
+    top: 0px;
+  }
 `
 
 export const MenuBlock = styled.div`
@@ -66,6 +77,13 @@ export const MenuBlock = styled.div`
     top: -124px;
     left: -16px;
   }
+  @media ${device.mobileM} {
+    transform: rotate(-8deg);
+    height: 500px;
+    width: 500px;
+    top: -23px;
+    left: -23px;
+  }
 `
 
 export const MenuImage = styled.img`
@@ -76,6 +94,9 @@ export const MenuImage = styled.img`
     width: 684px;
     top: 531px;
   }
+  @media ${device.mobileM} {
+    height: 450px;
+  }
 `
 
 export const Box = styled.div`
@@ -85,6 +106,18 @@ export const Box = styled.div`
   flex-direction: column;
   align-items: start;
 `
+export const MobileMenu = styled.div`
+  @media ${device.desktopL} {
+    display: none;
+  }
+  @media ${device.mobileM} {
+    width: calc(100vw - 40px);
+    padding: 12px 20px;
+    background: ${BLACK};
+    display: flex;
+    justify-content: space-between;
+  }
+`
 
 export const NavigationMenu = styled.div`
   padding: 16px 0px;
@@ -93,6 +126,10 @@ export const NavigationMenu = styled.div`
   @media ${device.tablet} {
     padding: 16px 0px 0px;
   }
+  @media ${device.mobileM} {
+    display: none;
+  }
+
 `
 
 export const Menu = styled.div`
@@ -124,6 +161,17 @@ export const ButtonPrimary = styled.a`
   border-radius: 8px;
   text-decoration: none;
   padding: 17px 24px;
+  @media ${device.mobileM} {
+    width: 160px;
+    height: 48px;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+  }
 `
 
 export const ButtonDemo = styled.a`
@@ -148,6 +196,15 @@ export const AmazonButton = styled.a`
   text-decoration: none;
   padding: 22px 56px 14px;
   margin-left: 20px;
+  @media ${device.mobileM} {
+    width: 160px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    margin-left: 16px;
+  }
 `
 
 export const HeroCTA = styled.div`
@@ -162,6 +219,9 @@ export const HeroCTA = styled.div`
     margin-top: 80px;
     align-self: center;
   }
+  @media ${device.mobileM} {
+    width: calc(100vw - 40px);
+  }
 `
 
 export const HeroHead = styled.h1`
@@ -171,6 +231,11 @@ export const HeroHead = styled.h1`
   letter-spacing: 0.05em;
   text-transform: capitalize;
   color: ${BLACK};
+  @media ${device.mobileM} {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0em;
+  }
 `
 
 export const HeroButtons = styled.div`
@@ -188,6 +253,9 @@ export const Benefits = styled.div`
   @media ${device.tablet} {
     margin: 80px 40px 64px;
   }
+  @media ${device.mobileM} {
+    margin: 64px 20px;
+  }
 `
 
 export const Caption = styled.div`
@@ -204,6 +272,11 @@ export const TextHead = styled.h2`
   letter-spacing: 0.05em;
   text-transform: capitalize;
   color: ${BLACK};
+  @media ${device.mobileM} {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0em;
+  }
 `
 
 export const CaptionText = styled.p`
@@ -212,6 +285,11 @@ export const CaptionText = styled.p`
   line-height: 28px;
   color: ${DARK_GREY};
   margin-top: 16px;
+  @media ${device.mobileM} {
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 8px;
+  }
 `
 
 export const Content = styled.div`
@@ -221,6 +299,9 @@ export const Content = styled.div`
   @media ${device.tablet} {
     flex-wrap: wrap;
     justify-content: center;
+  }
+  @media ${device.mobileM} {
+    margin-top: 48px;
   }
 `
 
@@ -234,6 +315,9 @@ export const Card = styled.div`
   padding: 0px 32px;
   @media ${device.tablet} {
     padding: 0px 24px;
+  }
+  @media ${device.mobileM} {
+    padding: 0px 32px;
   }
 `
 
@@ -250,6 +334,9 @@ export const CardTwo = styled(Card)`
     margin-left: 40px;
     margin-right: 0px;
   }
+  @media ${device.mobileM} {
+    margin: 32px 0px;
+  }
 `
 
 export const CardThree = styled(Card)`
@@ -257,6 +344,9 @@ export const CardThree = styled(Card)`
   border-radius: 8px;
   @media ${device.tablet} {
     margin-top: 40px;
+  }
+  @media ${device.mobileM} {
+    margin-top: 0px;
   }
 `
 
@@ -281,6 +371,7 @@ export const VideoBlock = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
+  overflow: hidden;
   @media ${device.tablet} {
     padding: 53px 34px;
   }
@@ -297,6 +388,11 @@ export const LightBlock = styled.div`
     width: 640px;
     height: 868px;
     transform: rotate(4deg);
+  }
+  @media ${device.mobileM} {
+    width: 375px;
+    height: 688px;
+    transform: rotate(6deg);
   }
 `
 
@@ -315,6 +411,11 @@ export const DarkBlock = styled.div`
     top: 86px;
     left: 64px;
     border-radius: 8px;
+  }
+  @media ${device.mobileM} {
+    width: calc(100vw - 32px);
+    height: 384px;
+    left: 16px;
   }
 `
 
@@ -339,6 +440,9 @@ export const VideoCTA = styled.div`
     align-items: center;
     width: 482px;
     text-align: center;
+  }
+  @media ${device.mobileM} {
+    width: calc(100% - 32px);
   }
 `
 
@@ -367,6 +471,9 @@ export const App = styled.div`
     flex-direction: column-reverse;
     padding: 80px 0px 120px;
   }
+  @media ${device.tablet} {
+    padding: 40px 0px 64px;
+  }
 `
 
 export const AppImage = styled.img`
@@ -374,6 +481,9 @@ export const AppImage = styled.img`
   @media ${device.tablet} {
     width: 100%;
     margin-top: 120px;
+  }
+  @media ${device.mobileM} {
+    margin-top: 64px;
   }
 `
 
@@ -395,6 +505,9 @@ export const FramedHead = styled.div`
     text-align: center;
     width: 61vw;
   }
+  @media ${device.mobileM} {
+    width: 90vw;
+  }
 `
 
 export const AppHead = styled.h3`
@@ -405,11 +518,16 @@ export const AppHead = styled.h3`
   text-transform: capitalize;
   color: ${BLACK};
 `
+
 export const AppBox = styled.div`
   margin: 40px 0px 48px;
   @media ${device.tablet} {
     display: flex;
     margin: 40px 40px 56px;
+  }
+  @media ${device.mobileM} {
+    flex-direction: column;
+    margin: 40px 20px 48px;
   }
 `
 
@@ -432,6 +550,10 @@ export const CombosCard = styled(AppCard)`
   @media ${device.tablet} {
     margin-top: 0px;
     margin-left: 20px;
+  }
+  @media ${device.mobileM} {
+    margin-top: 24px;
+    margin-left: 0px;
   }
 `
 
@@ -476,6 +598,9 @@ export const Footer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media ${device.mobileM} {
+    padding: 24px 0px;
+  }
 `
 
 export const Container = styled.div`
@@ -489,6 +614,9 @@ export const Container = styled.div`
     width: calc(100vw - 80px);
     position: static;
   }
+  @media ${device.mobileM} {
+    width: calc(100vw - 40px);
+  }
 `
 
 export const MenuFooter = styled.div`
@@ -498,6 +626,11 @@ export const MenuFooter = styled.div`
   color: ${WHITE};
   align-items: center;
   height: 32px;
+  margin-bottom: 36px;
+  @media ${device.mobileM} {
+    width: calc(100vw - 40px);
+    margin-bottom: 32px;
+  }
 `
 
 export const Socials = styled.div`
@@ -514,5 +647,4 @@ export const MyFitRight = styled.p`
   line-height: 24px;
   color: ${WHITE};
   opacity: 0.4;
-  margin-top: 36px;
 `
