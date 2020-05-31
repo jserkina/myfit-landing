@@ -171,7 +171,7 @@ export const Menu = styled.div`
 
 `
 
-export const MenuButton = styled.div`
+export const MenuButton = styled.a`
   font-weight: bold;
   font-size: 14px;
   line-height: 18px;
