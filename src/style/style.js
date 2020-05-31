@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { device } from './device.js';
 
 
+
 import {
   BLACK,
   DARK_GREY,
@@ -25,12 +26,11 @@ export const Hero = styled.div`
   position: relative;
   height: 720px;
   overflow: hidden;
-  @media ${device.tablet} {
-    background: ${BLACK};
+  @media ${device.laptop} {
     height: 1204px;
   }
-  @media ${device.mobileM} {
-    height: 1000px;
+  @media ${device.mobile} {
+    height: 940px;
   }
 `
 
@@ -45,19 +45,22 @@ export const MenuBlockLight = styled.div`
   position: absolute;
   top: -70px;
   left: 63.68px;
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     transform: rotate(6deg);
-    width: 768px;
+    width: 100vw;
     height: 448px;
     top: 45px;
-    left: -36px;
+    left: -20px;
   }
-  @media ${device.mobileM} {
+  @media ${device.mobile} {
     width: 500px;
     height: 500px;
     opacity: 0.7;
-    left: -103px;
+    left: -55px;
     top: 0px;
+  }
+  @media ${device.mobileM} {
+    left: -103px;
   }
 `
 
@@ -70,14 +73,14 @@ export const MenuBlock = styled.div`
   align-self: center;
   position: absolute;
   top: -60px;
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     transform: rotate(-6deg);
     height: 611.71px;
-    width: 824.02px;
+    width: 108vw;
     top: -124px;
     left: -16px;
   }
-  @media ${device.mobileM} {
+  @media ${device.mobile} {
     transform: rotate(-8deg);
     height: 500px;
     width: 500px;
@@ -85,17 +88,39 @@ export const MenuBlock = styled.div`
     left: -23px;
   }
 `
-
-export const MenuImage = styled.img`
+export const MenuBlockDark = styled.div`
   width: 45vw;
+  height: 100%;
   position: absolute;
   right: 0;
+  background: ${BLACK};
+  display: flex;
+  align-items: flex-end;
+  @media ${device.laptop} {
+    width: 100vw;
+    position: static;
+  }
+`
+
+export const MenuImage = styled.img`
+  @media ${device.laptop} {
+    position: relative;
+    bottom: 20px;
+    left: 200px;
+  }
   @media ${device.tablet} {
-    width: 684px;
-    top: 531px;
+    left: 63px;
+  }
+  @media ${device.mobile} {
+    height: 450px;
+    bottom: 0px;
+    left: 6px;
   }
   @media ${device.mobileM} {
-    height: 450px;
+    left: -20px;
+  }
+  @media ${device.mobileS} {
+    left: -43px;
   }
 `
 
@@ -106,11 +131,12 @@ export const Box = styled.div`
   flex-direction: column;
   align-items: start;
 `
+
 export const MobileMenu = styled.div`
-  @media ${device.desktopL} {
+  @media ${device.desktop} {
     display: none;
   }
-  @media ${device.mobileM} {
+  @media ${device.mobile} {
     width: calc(100vw - 40px);
     padding: 12px 20px;
     background: ${BLACK};
@@ -123,10 +149,10 @@ export const NavigationMenu = styled.div`
   padding: 16px 0px;
   display: flex;
   align-items: center;
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     padding: 16px 0px 0px;
   }
-  @media ${device.mobileM} {
+  @media ${device.mobile} {
     display: none;
   }
 
@@ -138,7 +164,7 @@ export const Menu = styled.div`
   justify-content: space-between;
   color: ${BLACK};
   margin: 0px 432px 0px 112px;
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     width: 305px;
     margin: 0px 40px 0px 85px;
   }
@@ -161,7 +187,7 @@ export const ButtonPrimary = styled.a`
   border-radius: 8px;
   text-decoration: none;
   padding: 17px 24px;
-  @media ${device.mobileM} {
+  @media ${device.mobile} {
     width: 160px;
     height: 48px;
     font-size: 14px;
@@ -185,7 +211,7 @@ export const ButtonDemo = styled.a`
   border-radius: 8px;
   text-decoration: none;
   padding: 17px 24px;
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     padding: 14px 16px;
   }
 `
@@ -196,7 +222,7 @@ export const AmazonButton = styled.a`
   text-decoration: none;
   padding: 22px 56px 14px;
   margin-left: 20px;
-  @media ${device.mobileM} {
+  @media ${device.mobile} {
     width: 160px;
     height: 48px;
     display: flex;
@@ -213,13 +239,13 @@ export const HeroCTA = styled.div`
   flex-direction: column;
   align-items: flex-start;
   margin-top: 176px;
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     text-align: center;
     align-items: center;
     margin-top: 80px;
     align-self: center;
   }
-  @media ${device.mobileM} {
+  @media ${device.mobile} {
     width: calc(100vw - 40px);
   }
 `
@@ -231,7 +257,7 @@ export const HeroHead = styled.h1`
   letter-spacing: 0.05em;
   text-transform: capitalize;
   color: ${BLACK};
-  @media ${device.mobileM} {
+  @media ${device.mobile} {
     font-size: 32px;
     line-height: 40px;
     letter-spacing: 0em;
@@ -241,6 +267,9 @@ export const HeroHead = styled.h1`
 export const HeroButtons = styled.div`
   margin-top: 40px;
   display: flex;
+  @media ${device.mobileS} {
+    width: calc(100vw - 40px);
+  }
 `
 
 
@@ -250,17 +279,17 @@ export const Benefits = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     margin: 80px 40px 64px;
   }
-  @media ${device.mobileM} {
-    margin: 64px 20px;
+  @media ${device.mobile} {
+    margin: 64px 20px 43px;
   }
 `
 
 export const Caption = styled.div`
   width: 780px;
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     width: 100%;
   }
 `
@@ -272,7 +301,7 @@ export const TextHead = styled.h2`
   letter-spacing: 0.05em;
   text-transform: capitalize;
   color: ${BLACK};
-  @media ${device.mobileM} {
+  @media ${device.mobile} {
     font-size: 32px;
     line-height: 40px;
     letter-spacing: 0em;
@@ -285,7 +314,7 @@ export const CaptionText = styled.p`
   line-height: 28px;
   color: ${DARK_GREY};
   margin-top: 16px;
-  @media ${device.mobileM} {
+  @media ${device.mobile} {
     font-size: 14px;
     line-height: 24px;
     margin-top: 8px;
@@ -296,11 +325,11 @@ export const Content = styled.div`
   align-items: center;
   display: flex;
   margin-top: 64px;
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     flex-wrap: wrap;
     justify-content: center;
   }
-  @media ${device.mobileM} {
+  @media ${device.mobile} {
     margin-top: 48px;
   }
 `
@@ -313,11 +342,14 @@ export const Card = styled.div`
   height: 210px;
   width: 276px;
   padding: 0px 32px;
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     padding: 0px 24px;
   }
-  @media ${device.mobileM} {
+  @media ${device.mobile} {
     padding: 0px 32px;
+  }
+  @media ${device.mobileS} {
+    width: calc(100vw - 104px);
   }
 `
 
@@ -330,11 +362,11 @@ export const CardTwo = styled(Card)`
   background: ${SOFT_PINK};
   border-radius: 8px;
   margin: 0px 80px;
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     margin-left: 40px;
     margin-right: 0px;
   }
-  @media ${device.mobileM} {
+  @media ${device.mobile} {
     margin: 32px 0px;
   }
 `
@@ -342,10 +374,10 @@ export const CardTwo = styled(Card)`
 export const CardThree = styled(Card)`
   background: ${SOFT_YELLOW};
   border-radius: 8px;
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     margin-top: 40px;
   }
-  @media ${device.mobileM} {
+  @media ${device.mobile} {
     margin-top: 0px;
   }
 `
@@ -371,9 +403,11 @@ export const VideoBlock = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  overflow: hidden;
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     padding: 53px 34px;
+  }
+  @media ${device.mobile} {
+    overflow: hidden;
   }
 `
 
@@ -384,12 +418,15 @@ export const LightBlock = styled.div`
   border-radius: 8px;
   transform: rotate(3deg);
   align-self: center;
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     width: 640px;
-    height: 868px;
+    height: 1026px;
     transform: rotate(4deg);
   }
-  @media ${device.mobileM} {
+  @media ${device.tablet} {
+    height: 868px;
+  }
+  @media ${device.mobile} {
     width: 375px;
     height: 688px;
     transform: rotate(6deg);
@@ -405,14 +442,17 @@ export const DarkBlock = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     height: 342px;
     width: 640px;
     top: 86px;
-    left: 64px;
+    left: 200px;
     border-radius: 8px;
   }
-  @media ${device.mobileM} {
+  @media ${device.tablet} {
+    left: 64px;
+  }
+  @media ${device.mobile} {
     width: calc(100vw - 32px);
     height: 384px;
     left: 16px;
@@ -425,9 +465,13 @@ export const VideoStyle = styled.img`
   position: absolute;
   right: 0;
   object-fit: contain;
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     width: 100vw;
     bottom: -168px;
+  }
+  @media ${device.mobile} {
+    width: 120vw;
+    bottom: -184px;
   }
 `
 
@@ -436,12 +480,12 @@ export const VideoCTA = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     align-items: center;
     width: 482px;
     text-align: center;
   }
-  @media ${device.mobileM} {
+  @media ${device.mobile} {
     width: calc(100% - 32px);
   }
 `
@@ -467,22 +511,22 @@ export const App = styled.div`
   padding: 80px 0px 80px 64px;
   display: flex;
   align-items: center;
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     flex-direction: column-reverse;
     padding: 80px 0px 120px;
   }
-  @media ${device.tablet} {
+  @media ${device.mobile} {
     padding: 40px 0px 64px;
   }
 `
 
 export const AppImage = styled.img`
   width: calc(50vw - 64px);
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     width: 100%;
     margin-top: 120px;
   }
-  @media ${device.mobileM} {
+  @media ${device.mobile} {
     margin-top: 64px;
   }
 `
@@ -493,7 +537,7 @@ export const AppCTA = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     align-items: center;
     width: 100%;
     margin: 0px;
@@ -501,11 +545,11 @@ export const AppCTA = styled.div`
 `
 
 export const FramedHead = styled.div`
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     text-align: center;
     width: 61vw;
   }
-  @media ${device.mobileM} {
+  @media ${device.mobile} {
     width: 90vw;
   }
 `
@@ -521,11 +565,11 @@ export const AppHead = styled.h3`
 
 export const AppBox = styled.div`
   margin: 40px 0px 48px;
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     display: flex;
     margin: 40px 40px 56px;
   }
-  @media ${device.mobileM} {
+  @media ${device.mobile} {
     flex-direction: column;
     margin: 40px 20px 48px;
   }
@@ -535,7 +579,7 @@ export const AppCard = styled.div`
   padding: 20px 24px;
   border-radius: 8px;
   display: flex;
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     padding: 20px 20px 20px 25px;
   }
 `
@@ -547,11 +591,11 @@ export const WorkoutCard = styled(AppCard)`
 export const CombosCard = styled(AppCard)`
   background: #F8F8F8;
   margin-top: 16px;
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     margin-top: 0px;
     margin-left: 20px;
   }
-  @media ${device.mobileM} {
+  @media ${device.mobile} {
     margin-top: 24px;
     margin-left: 0px;
   }
@@ -576,6 +620,7 @@ export const Bottom = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 `
 
 export const BottomText = styled.p`
@@ -588,7 +633,6 @@ export const BottomText = styled.p`
 
 export const OrderButton = styled(ButtonPrimary)`
   margin: 32px 0px 16px;
-
 `
 
 export const Footer = styled.div`
@@ -598,7 +642,7 @@ export const Footer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media ${device.mobileM} {
+  @media ${device.mobile} {
     padding: 24px 0px;
   }
 `
@@ -609,12 +653,12 @@ export const Container = styled.div`
   width: 61.5vw;
   justify-content: space-between;
   position: absolute;
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     margin-bottom: 32px;
     width: calc(100vw - 80px);
     position: static;
   }
-  @media ${device.mobileM} {
+  @media ${device.mobile} {
     width: calc(100vw - 40px);
   }
 `
@@ -627,7 +671,7 @@ export const MenuFooter = styled.div`
   align-items: center;
   height: 32px;
   margin-bottom: 36px;
-  @media ${device.mobileM} {
+  @media ${device.mobile} {
     width: calc(100vw - 40px);
     margin-bottom: 32px;
   }

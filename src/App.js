@@ -1,5 +1,6 @@
 import React from 'react';
-import Reset from 'reset-css';
+import { Reset } from 'reset-css';
+import { Player } from 'video-react';
 
 import Leaf from './icons/Leaf.svg';
 import Phone from './icons/Phone.svg';
@@ -20,17 +21,17 @@ import Video from './icons/Video.png';
 import PlayVideo from './icons/PlayVideo.svg';
 import MenuHero from './icons/MenuHero.png'
 
-
-
 import * as S from './style/style.js';
 
-function App() {
+export default props => {
   return (
     <S.Bg>
       <S.Hero>
         <S.MenuBlockLight></S.MenuBlockLight>
         <S.MenuBlock></S.MenuBlock>
-        <S.MenuImage src={MenuHero} alt='Man is running' />
+        <S.MenuBlockDark>
+          <S.MenuImage src={MenuHero} alt='Man is running' />
+        </S.MenuBlockDark>
         <S.Box>
           <S.MobileMenu>
             <img src={LogoWhite} />
@@ -93,7 +94,15 @@ function App() {
             <S.ButtonPrimary href='https://www.amazon.com/'>Explore More</S.ButtonPrimary>
           </S.VideoCTA>
         </S.DarkBlock>
-        <S.VideoStyle src={Video} alt='Video'/>
+        <S.VideoStyle src={Video} />
+        {/*<Player
+          style={{  position: 'absolute',
+                    right: '0',
+                    objectFit: 'contain', }}
+          playsInline
+          poster="/assets/poster.png"
+          src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
+        />*/}
       </S.VideoBlock>
       <S.App>
         <S.AppImage src={Image} alt='MyFit App'/>
@@ -131,9 +140,15 @@ function App() {
         <S.Container>
           <img src={Logo} />
           <S.Socials>
-            <img src={Twitter} />
-            <img src={Facebook} />
-            <img src={Instagram} />
+            <a href='https://twitter.com/'>
+              <img src={Twitter} />
+            </a>
+            <a href='https://www.facebook.com/'>
+              <img src={Facebook} />
+            </a>
+            <a href='https://www.instagram.com/'>
+              <img src={Instagram} />
+            </a>
           </S.Socials>
         </S.Container>
         <S.MenuFooter>
@@ -146,6 +161,4 @@ function App() {
       </S.Footer>
     </S.Bg>
   );
-}
-
-export default App;
+};
