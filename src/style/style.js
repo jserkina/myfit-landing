@@ -274,16 +274,16 @@ export const HeroButtons = styled.div`
 
 
 export const Benefits = styled.div`
-  margin: 120px 0px;
+  padding: 120px 0px;
   text-align: center;
   display: flex;
   align-items: center;
   flex-direction: column;
   @media ${device.laptop} {
-    margin: 80px 40px 64px;
+    padding: 80px 40px 64px;
   }
   @media ${device.mobile} {
-    margin: 64px 20px 43px;
+    padding: 64px 20px 43px;
   }
 `
 
