@@ -103,6 +103,9 @@ export const MenuBlockDark = styled.div`
 `
 
 export const MenuImage = styled.img`
+  width: 100%;
+  position: absolute;
+  top: -54px;
   @media ${device.laptop} {
     position: relative;
     bottom: 20px;
@@ -299,7 +302,6 @@ export const TextHead = styled.h2`
   font-size: 36px;
   line-height: 45px;
   letter-spacing: 0.05em;
-  text-transform: capitalize;
   color: ${BLACK};
   @media ${device.mobile} {
     font-size: 32px;
@@ -341,12 +343,12 @@ export const Card = styled.div`
   justify-content: center;
   height: 210px;
   width: 276px;
-  padding: 0px 32px;
+  padding: 16px 32px;
   @media ${device.laptop} {
-    padding: 0px 24px;
+    padding: 16px 24px;
   }
   @media ${device.mobile} {
-    padding: 0px 32px;
+    padding: 16px 32px;
   }
   @media ${device.mobileS} {
     width: calc(100vw - 104px);
@@ -354,7 +356,7 @@ export const Card = styled.div`
 `
 
 export const CardOne = styled(Card)`
-  background: ${SOFT_ORANGE};
+  background: ${SOFT_YELLOW};
   border-radius: 8px;
 `
 
@@ -372,7 +374,7 @@ export const CardTwo = styled(Card)`
 `
 
 export const CardThree = styled(Card)`
-  background: ${SOFT_YELLOW};
+  background: ${SOFT_ORANGE};
   border-radius: 8px;
   @media ${device.laptop} {
     margin-top: 40px;
@@ -496,7 +498,7 @@ export const VideoHead = styled.h2`
   line-height: 50px;
   letter-spacing: 0.05em;
   text-transform: capitalize;
-  color: ${WHITE};
+  color: ${PRIMARY};
 `
 
 export const VideoText = styled.p`
