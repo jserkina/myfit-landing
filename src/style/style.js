@@ -178,6 +178,7 @@ export const MenuButton = styled.a`
   font-weight: bold;
   font-size: 14px;
   line-height: 18px;
+  cursor: pointer;
 `
 
 export const ButtonPrimary = styled.a`
@@ -401,7 +402,7 @@ export const CardText = styled.p`
 `
 
 
-export const VideoBlock = styled.div`
+export const ProductBlock = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
@@ -436,7 +437,7 @@ export const LightBlock = styled.div`
 `
 
 export const DarkBlock = styled.div`
-  width: 55vw;
+  width: 100vw;
   height: 598px;
   background: ${BLACK};
   position: absolute;
@@ -461,7 +462,7 @@ export const DarkBlock = styled.div`
   }
 `
 
-export const VideoStyle = styled.img`
+export const ProductStyle = styled.img`
   width: 61.5vw;
   height: 100%;
   position: absolute;
@@ -477,11 +478,13 @@ export const VideoStyle = styled.img`
   }
 `
 
-export const VideoCTA = styled.div`
-  width: 324px;
+export const ProductCTA = styled.div`
+  width: 350px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  position: relative;
+  right: 350px;
   @media ${device.laptop} {
     align-items: center;
     width: 482px;
@@ -492,7 +495,7 @@ export const VideoCTA = styled.div`
   }
 `
 
-export const VideoHead = styled.h2`
+export const ProductHead = styled.h2`
   font-weight: bold;
   font-size: 40px;
   line-height: 50px;
@@ -501,7 +504,7 @@ export const VideoHead = styled.h2`
   color: ${PRIMARY};
 `
 
-export const VideoText = styled.p`
+export const ProductText = styled.p`
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
@@ -603,6 +606,11 @@ export const CombosCard = styled(AppCard)`
   }
 `
 
+export const FavouritesCard = styled(AppCard)`
+  background: ${SOFT_YELLOW};
+  margin-top: 16px;
+`
+
 export const Framed = styled.div`
   margin-left: 24px;
 `
@@ -651,7 +659,7 @@ export const Footer = styled.div`
 
 export const Container = styled.div`
   display: flex;
-  align-items: center;
+  align-items: start;
   width: 61.5vw;
   justify-content: space-between;
   position: absolute;
@@ -693,4 +701,17 @@ export const MyFitRight = styled.p`
   line-height: 24px;
   color: ${WHITE};
   opacity: 0.4;
+`
+
+export const EmailText = styled.p`
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: ${WHITE};
+  margin-top: 6px;
+`
+
+export const Email = styled.input`
+  margin-top: 4px;
+  border: none;
 `

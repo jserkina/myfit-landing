@@ -115,17 +115,17 @@ export default class MyComponent extends Component {
             </S.Benefits>
           </Section>
           <Section id="product">
-            <S.VideoBlock>
+            <S.ProductBlock>
               <S.LightBlock></S.LightBlock>
               <S.DarkBlock>
-                <S.VideoCTA>
-                  <S.VideoHead>No Breakage. No Excuses.</S.VideoHead>
-                  <S.VideoText>These 11 piece set will enable you to replicate your favourite gym workouts without compromising on the resistance. You’ve got all you need to achieve your fitness goals.</S.VideoText>
+                <S.ProductCTA>
+                  <S.ProductHead>No Breakage. No Excuses.</S.ProductHead>
+                  <S.ProductText>These 11 piece set will enable you to replicate your favourite gym workouts without compromising on the resistance. You’ve got all you need to achieve your fitness goals.</S.ProductText>
                   <S.ButtonPrimary href='https://www.amazon.com/'>Shop Now</S.ButtonPrimary>
-                </S.VideoCTA>
+                </S.ProductCTA>
+                <S.ProductStyle src={ProductPhoto} alt='Shavron Massage Gun' />
               </S.DarkBlock>
-              <S.VideoStyle src={ProductPhoto} />
-            </S.VideoBlock>
+            </S.ProductBlock>
           </Section>
           <Section id="app">
             <S.App>
@@ -150,13 +150,13 @@ export default class MyComponent extends Component {
                       <S.CardText>Working on chest day? Or is it time to finally do legs? Whatever you’re working on, we’ve curated combo videos which puts together a set of workout plans for specific muscle groups.</S.CardText>
                     </S.Framed>
                   </S.CombosCard>
-                  <S.CombosCard>
+                  <S.FavouritesCard>
                     <img src={Dumbbell} />
                     <S.Framed>
                       <S.AppTextBold>Favourites</S.AppTextBold>
                       <S.CardText>Want to curate your own workout plans? You can favourite your preferred workouts and collate a playlist of workouts for yourself.</S.CardText>
                     </S.Framed>
-                  </S.CombosCard>
+                  </S.FavouritesCard>
                 </S.AppBox>
                 <S.ButtonPrimary href='https://www.amazon.com/'>Go to Application</S.ButtonPrimary>
               </S.AppCTA>
@@ -172,6 +172,7 @@ export default class MyComponent extends Component {
             <S.Footer>
               <S.Container>
                 <img src={Logo} />
+                <div>
                 <S.Socials>
                   <a href='https://twitter.com/'>
                     <img src={Twitter} />
@@ -183,12 +184,22 @@ export default class MyComponent extends Component {
                     <img src={Instagram} />
                   </a>
                 </S.Socials>
+                <S.EmailText>SIGN UP TO OUR NEWSLETTER</S.EmailText>
+                <S.Email type='email' placeholder='Enter your email'/>
+                </div>
               </S.Container>
               <S.MenuFooter>
-                <SectionLink section="products">
+                <SectionLink section="why">
                   {({ onClick, isSelected }) => (
                     <S.MenuButton onClick={onClick} selected={isSelected}>
-                      Products
+                      Why
+                    </S.MenuButton>
+                  )}
+                </SectionLink>
+                <SectionLink section="product">
+                  {({ onClick, isSelected }) => (
+                    <S.MenuButton onClick={onClick} selected={isSelected}>
+                      Product
                     </S.MenuButton>
                   )}
                 </SectionLink>
@@ -199,17 +210,10 @@ export default class MyComponent extends Component {
                     </S.MenuButton>
                   )}
                 </SectionLink>
-                <SectionLink section="benefit">
+                <SectionLink section="contact">
                   {({ onClick, isSelected }) => (
                     <S.MenuButton onClick={onClick} selected={isSelected}>
-                      Benefit
-                    </S.MenuButton>
-                  )}
-                </SectionLink>
-                <SectionLink section="about us">
-                  {({ onClick, isSelected }) => (
-                    <S.MenuButton onClick={onClick} selected={isSelected}>
-                      About Us
+                      Contact
                     </S.MenuButton>
                   )}
                 </SectionLink>
