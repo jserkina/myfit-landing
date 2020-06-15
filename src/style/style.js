@@ -680,10 +680,8 @@ export const MenuFooter = styled.div`
   color: ${WHITE};
   align-items: center;
   height: 32px;
-  margin-bottom: 36px;
   @media ${device.mobile} {
     width: calc(100vw - 40px);
-    margin-bottom: 32px;
   }
 `
 
@@ -701,17 +699,41 @@ export const MyFitRight = styled.p`
   line-height: 24px;
   color: ${WHITE};
   opacity: 0.4;
+  align-self: flex-start;
+  margin-left: 40px;
+  @media ${device.mobile} {
+    margin-left: 20px;
+  }
 `
 
 export const EmailText = styled.p`
-  font-weight: normal;
+  font-weight: bold;
   font-size: 14px;
   line-height: 24px;
   color: ${WHITE};
-  margin-top: 6px;
+  margin-top: 32px;
 `
 
 export const Email = styled.input`
-  margin-top: 4px;
+  margin-top: 12px;
   border: none;
+  margin-bottom: 18px;
+  border-radius: 6px;
+  padding: 6px;
+`
+
+export const EmailButton = styled.button`
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+  color: ${WHITE};
+  text-align: center;
+  background: ${PRIMARY};
+  border-radius: 6px;
+  border: none;
+  padding: 2px 12px;
+  margin-bottom: 46px;
+  @media ${device.mobile} {
+    margin-bottom: 42px;
+  }
 `

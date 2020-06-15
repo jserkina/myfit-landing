@@ -32,7 +32,7 @@ export default class MyComponent extends Component {
       <S.Bg>
         <ScrollingProvider>
           <S.Hero>
-            <S.MenuBlockLight></S.MenuBlockLight>
+            <S.LightBlock></S.LightBlock>
             <S.MenuBlock></S.MenuBlock>
             <S.MenuImage src={MainPhoto} />
             <S.Box>
@@ -140,14 +140,14 @@ export default class MyComponent extends Component {
                     <img src={Dumbbell} />
                     <S.Framed>
                       <S.AppTextBold>Workout Videos</S.AppTextBold>
-                      <S.CardText>A variety of workouts covering all muscle groups. Our personal trainers showcase an array of exercises that are catered to fulfill muscle growth, toning and weight-loss.</S.CardText>
+                      <S.CardText>Our personal trainers showcase an array of exercises that are catered to fulfill muscle growth, toning and weight-loss.</S.CardText>
                     </S.Framed>
                   </S.WorkoutCard>
                   <S.CombosCard>
                     <img src={Dumbbell} />
                     <S.Framed>
                       <S.AppTextBold>Combos</S.AppTextBold>
-                      <S.CardText>Working on chest day? Or is it time to finally do legs? Whatever you’re working on, we’ve curated combo videos which puts together a set of workout plans for specific muscle groups.</S.CardText>
+                      <S.CardText>Whatever you’re working on, we’ve curated combo videos which puts together a set of workout plans for specific muscle groups.</S.CardText>
                     </S.Framed>
                   </S.CombosCard>
                   <S.FavouritesCard>
@@ -172,7 +172,6 @@ export default class MyComponent extends Component {
             <S.Footer>
               <S.Container>
                 <img src={Logo} />
-                <div>
                 <S.Socials>
                   <a href='https://twitter.com/'>
                     <img src={Twitter} />
@@ -184,9 +183,6 @@ export default class MyComponent extends Component {
                     <img src={Instagram} />
                   </a>
                 </S.Socials>
-                <S.EmailText>SIGN UP TO OUR NEWSLETTER</S.EmailText>
-                <S.Email type='email' placeholder='Enter your email'/>
-                </div>
               </S.Container>
               <S.MenuFooter>
                 <SectionLink section="why">
@@ -218,6 +214,9 @@ export default class MyComponent extends Component {
                   )}
                 </SectionLink>
               </S.MenuFooter>
+              <S.EmailText>SIGN UP TO OUR NEWSLETTER</S.EmailText>
+              <S.Email type='email' placeholder='Enter your email'/>
+              <S.EmailButton>Sign Up</S.EmailButton>
               <S.MyFitRight>© 2020 - MyFit, All right are reserved</S.MyFitRight>
             </S.Footer>
           </Section>
