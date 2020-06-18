@@ -107,23 +107,18 @@ export const MenuImage = styled.img`
   position: absolute;
   top: -54px;
   @media ${device.laptop} {
-    position: relative;
-    bottom: 20px;
-    left: 200px;
+
   }
   @media ${device.tablet} {
-    left: 63px;
   }
   @media ${device.mobile} {
     height: 450px;
     bottom: 0px;
-    left: 6px;
   }
   @media ${device.mobileM} {
-    left: -20px;
   }
   @media ${device.mobileS} {
-    left: -43px;
+
   }
 `
 
@@ -308,6 +303,7 @@ export const TextHead = styled.h2`
     font-size: 32px;
     line-height: 40px;
     letter-spacing: 0em;
+    padding: 0px 20px;
   }
 `
 
@@ -382,6 +378,7 @@ export const CardThree = styled(Card)`
   }
   @media ${device.mobile} {
     margin-top: 0px;
+    height: auto;
   }
 `
 
@@ -423,7 +420,7 @@ export const LightBlock = styled.div`
   align-self: center;
   @media ${device.laptop} {
     width: 640px;
-    height: 1026px;
+    height: 1070px;
     transform: rotate(4deg);
   }
   @media ${device.tablet} {
@@ -463,18 +460,26 @@ export const DarkBlock = styled.div`
 `
 
 export const ProductStyle = styled.img`
-  width: 61.5vw;
+  width:  56.5vw;
   height: 100%;
   position: absolute;
   right: 0;
-  object-fit: contain;
+  @media ${device.laptopL} {
+    object-fit: contain;
+  }
   @media ${device.laptop} {
     width: 100vw;
     bottom: -168px;
   }
+  @media ${device.tablet} {
+    bottom: -191px;
+  }
   @media ${device.mobile} {
     width: 120vw;
-    bottom: -184px;
+    bottom: -218px;
+  }
+  @media ${device.mobile} {
+    bottom: -195px;
   }
 `
 
@@ -489,6 +494,7 @@ export const ProductCTA = styled.div`
     align-items: center;
     width: 482px;
     text-align: center;
+    right: 0px;
   }
   @media ${device.mobile} {
     width: calc(100% - 32px);
@@ -502,6 +508,18 @@ export const ProductHead = styled.h2`
   letter-spacing: 0.05em;
   text-transform: capitalize;
   color: ${PRIMARY};
+  @media ${device.laptop} {
+    width: 70%;
+  }
+  @media ${device.mobile} {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0em;
+  }
+  @media ${device.mobileS} {
+    font-size: 27px;
+    line-height: 34px;
+  }
 `
 
 export const ProductText = styled.p`
@@ -510,6 +528,10 @@ export const ProductText = styled.p`
   line-height: 24px;
   color: ${GREY};
   margin: 12px 0px 48px;
+  @media ${device.mobileS} {
+    font-size: 14px;
+    line-height: 18px;
+  }
 `
 
 export const App = styled.div`
@@ -571,7 +593,9 @@ export const AppHead = styled.h3`
 export const AppBox = styled.div`
   margin: 40px 0px 48px;
   @media ${device.laptop} {
+    flex-wrap: wrap;
     display: flex;
+    justify-content: center;
     margin: 40px 40px 56px;
   }
   @media ${device.mobile} {
@@ -586,6 +610,10 @@ export const AppCard = styled.div`
   display: flex;
   @media ${device.laptop} {
     padding: 20px 20px 20px 25px;
+    width: 42%;
+  }
+  @media ${device.mobile} {
+    width: calc(100% - 40px);
   }
 `
 
@@ -609,6 +637,9 @@ export const CombosCard = styled(AppCard)`
 export const FavouritesCard = styled(AppCard)`
   background: ${SOFT_YELLOW};
   margin-top: 16px;
+  @media ${device.laptop} {
+    margin-top: 24px;
+  }
 `
 
 export const Framed = styled.div`

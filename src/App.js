@@ -32,9 +32,11 @@ export default class MyComponent extends Component {
       <S.Bg>
         <ScrollingProvider>
           <S.Hero>
-            <S.LightBlock></S.LightBlock>
+            <S.MenuBlockLight></S.MenuBlockLight>
             <S.MenuBlock></S.MenuBlock>
+            <div>
             <S.MenuImage src={MainPhoto} />
+            </div>
             <S.Box>
               <S.MobileMenu>
                 <img src={LogoWhite} />
@@ -123,8 +125,8 @@ export default class MyComponent extends Component {
                   <S.ProductText>These 11 piece set will enable you to replicate your favourite gym workouts without compromising on the resistance. You’ve got all you need to achieve your fitness goals.</S.ProductText>
                   <S.ButtonPrimary href='https://www.amazon.com/'>Shop Now</S.ButtonPrimary>
                 </S.ProductCTA>
-                <S.ProductStyle src={ProductPhoto} alt='Shavron Massage Gun' />
               </S.DarkBlock>
+              <S.ProductStyle src={ProductPhoto} alt='Shavron Massage Gun' />
             </S.ProductBlock>
           </Section>
           <Section id="app">
