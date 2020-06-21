@@ -32,11 +32,8 @@ export default class MyComponent extends Component {
       <S.Bg>
         <ScrollingProvider>
           <S.Hero>
-            <S.MenuBlockLight></S.MenuBlockLight>
-            <S.MenuBlock></S.MenuBlock>
-            <div>
             <S.MenuImage src={MainPhoto} />
-            </div>
+            <S.MenuBlock></S.MenuBlock>
             <S.Box>
               <S.MobileMenu>
                 <img src={LogoWhite} />
@@ -217,8 +214,13 @@ export default class MyComponent extends Component {
                 </SectionLink>
               </S.MenuFooter>
               <S.EmailText>SIGN UP TO OUR NEWSLETTER</S.EmailText>
-              <S.Email type='email' placeholder='Enter your email'/>
-              <S.EmailButton>Sign Up</S.EmailButton>
+              <S.Email
+                type='email'
+                id="email"
+                name="email"
+                placeholder='Enter your email'
+              />
+              <S.EmailButton onClick={alert}>Sign Up</S.EmailButton>
               <S.MyFitRight>© 2020 - MyFit, All right are reserved</S.MyFitRight>
             </S.Footer>
           </Section>

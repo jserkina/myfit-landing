@@ -26,11 +26,14 @@ export const Hero = styled.div`
   position: relative;
   height: 720px;
   overflow: hidden;
-  @media ${device.laptop} {
-    height: 1204px;
+  @media ${device.tablet} {
+    height: 580px;
   }
   @media ${device.mobile} {
-    height: 940px;
+    height: 540px;
+  }
+  @media ${device.mobileS} {
+    height: 496px;
   }
 `
 
@@ -65,40 +68,23 @@ export const MenuBlockLight = styled.div`
 `
 
 export const MenuBlock = styled.div`
-  width: 81vw;;
-  height: 740px;
-  background: ${SOFT_ORANGE};
-  border-radius: 8px;
-  transform: rotate(-3deg);
-  align-self: center;
-  position: absolute;
-  top: -60px;
-  @media ${device.laptop} {
-    transform: rotate(-6deg);
-    height: 611.71px;
-    width: 108vw;
-    top: -124px;
-    left: -16px;
-  }
   @media ${device.mobile} {
     transform: rotate(-8deg);
     height: 500px;
     width: 500px;
-    top: -23px;
+    top: -12px;
     left: -23px;
+    background: ${SOFT_ORANGE};
+    border-radius: 8px;
+    align-self: center;
+    position: absolute;
+    opacity: 0.8;
   }
-`
-export const MenuBlockDark = styled.div`
-  width: 45vw;
-  height: 100%;
-  position: absolute;
-  right: 0;
-  background: ${BLACK};
-  display: flex;
-  align-items: flex-end;
-  @media ${device.laptop} {
-    width: 100vw;
-    position: static;
+  @media ${device.mobileM} {
+    top: -23px;
+  }
+  @media ${device.mobileS} {
+    top: -56px;
   }
 `
 
@@ -107,18 +93,19 @@ export const MenuImage = styled.img`
   position: absolute;
   top: -54px;
   @media ${device.laptop} {
-
-  }
-  @media ${device.tablet} {
+    width: 112%;
+    top: 0px;
   }
   @media ${device.mobile} {
-    height: 450px;
-    bottom: 0px;
+    width: 171%;
+    top: 56px;
+    right: -70px;
   }
   @media ${device.mobileM} {
+    width: 190%;
   }
   @media ${device.mobileS} {
-
+    width: 206%;
   }
 `
 
@@ -238,14 +225,19 @@ export const HeroCTA = styled.div`
   flex-direction: column;
   align-items: flex-start;
   margin-top: 176px;
-  @media ${device.laptop} {
-    text-align: center;
-    align-items: center;
+  @media ${device.tablet} {
     margin-top: 80px;
-    align-self: center;
+    width: 541px;
   }
   @media ${device.mobile} {
     width: calc(100vw - 40px);
+    align-self: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 128px;
+  }
+  @media ${device.mobileS} {
+    margin-top: 48px;
   }
 `
 
@@ -764,6 +756,7 @@ export const EmailButton = styled.button`
   border: none;
   padding: 2px 12px;
   margin-bottom: 46px;
+  cursor: pointer;
   @media ${device.mobile} {
     margin-bottom: 42px;
   }
