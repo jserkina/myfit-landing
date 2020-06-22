@@ -31,13 +31,15 @@ export default class MyComponent extends Component {
     return (
       <S.Bg>
         <ScrollingProvider>
-          <S.Hero>
+          <S.Main>
             <S.MenuImage src={MainPhoto} />
             <S.MenuBlock></S.MenuBlock>
             <S.Box>
               <S.MobileMenu>
                 <img src={LogoWhite} />
-                <img src={MenuPlay} />
+                <S.ButtonPrimaryMobile href='https://www.amazon.com/'>
+                  Buy Now
+                </S.ButtonPrimaryMobile>
               </S.MobileMenu>
               <S.NavigationMenu>
                 <img src={LogoBig} />
@@ -72,22 +74,21 @@ export default class MyComponent extends Component {
                   </SectionLink>
                 </S.Menu>
                 <S.ButtonPrimary href='https://www.amazon.com/'>
-                  {/*<img src={Play} style={{ marginRight: '8px'}}/>*/}
                   Buy Now
                 </S.ButtonPrimary>
               </S.NavigationMenu>
-              <S.HeroCTA>
-                <S.HeroHead>The Resistance Workout Revolution</S.HeroHead>
+              <S.MainCTA>
+                <S.MainHead>The Resistance Workout Revolution</S.MainHead>
                 <S.CaptionText>Designed with personality and produced to the highest standards - MYFIT bands allows you to train your way, wherever you are.</S.CaptionText>
-                <S.HeroButtons>
+                <S.MainButtons>
                   <S.ButtonPrimary href='https://www.amazon.com/'>Explore More</S.ButtonPrimary>
                   <S.AmazonButton href='https://www.amazon.com/'>
                     <img src={AmazonName} />
                   </S.AmazonButton>
-                </S.HeroButtons>
-              </S.HeroCTA>
+                </S.MainButtons>
+              </S.MainCTA>
             </S.Box>
-          </S.Hero>
+          </S.Main>
           <Section id="why">
             <S.Benefits>
               <S.Caption>
@@ -213,7 +214,7 @@ export default class MyComponent extends Component {
                   )}
                 </SectionLink>
               </S.MenuFooter>
-              <S.EmailText>SIGN UP TO OUR NEWSLETTER</S.EmailText>
+              <S.EmailHead>SIGN UP TO OUR NEWSLETTER</S.EmailHead>
               <S.Email
                 type='email'
                 id="email"

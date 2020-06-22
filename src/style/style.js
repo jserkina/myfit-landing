@@ -20,7 +20,7 @@ export const Bg = styled.div`
   width: 100vw;
 `
 
-export const Hero = styled.div`
+export const Main = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
@@ -37,7 +37,7 @@ export const Hero = styled.div`
   }
 `
 
-export const MenuBlockLight = styled.div`
+/*export const MenuBlockLight = styled.div`
   width: 81vw;;
   height: 720px;
   background: ${SOFT_ORANGE};
@@ -65,7 +65,7 @@ export const MenuBlockLight = styled.div`
   @media ${device.mobileM} {
     left: -103px;
   }
-`
+`*/
 
 export const MenuBlock = styled.div`
   @media ${device.mobile} {
@@ -140,7 +140,6 @@ export const NavigationMenu = styled.div`
   @media ${device.mobile} {
     display: none;
   }
-
 `
 
 export const Menu = styled.div`
@@ -153,7 +152,6 @@ export const Menu = styled.div`
     width: 305px;
     margin: 0px 40px 0px 85px;
   }
-
 `
 
 export const MenuButton = styled.a`
@@ -173,6 +171,7 @@ export const ButtonPrimary = styled.a`
   border-radius: 8px;
   text-decoration: none;
   padding: 17px 24px;
+  cursor: pointer;
   @media ${device.mobile} {
     width: 160px;
     height: 48px;
@@ -185,21 +184,15 @@ export const ButtonPrimary = styled.a`
     padding: 0px;
   }
 `
-
-export const ButtonDemo = styled.a`
-  font-weight: bold;
+export const ButtonPrimaryMobile = styled.a`
   font-size: 14px;
-  line-height: 143%;
-  color: ${PRIMARY};
-  display: flex;
-  align-items: center;
-  background: rgba(250, 69, 4, 0.2);
+  line-height: 18px;
+  font-weight: 800;
+  color: ${WHITE};
+  background: ${PRIMARY};
   border-radius: 8px;
   text-decoration: none;
-  padding: 17px 24px;
-  @media ${device.laptop} {
-    padding: 14px 16px;
-  }
+  padding: 12px 16px;
 `
 
 export const AmazonButton = styled.a`
@@ -208,6 +201,7 @@ export const AmazonButton = styled.a`
   text-decoration: none;
   padding: 22px 56px 14px;
   margin-left: 20px;
+  cursor: pointer;
   @media ${device.mobile} {
     width: 160px;
     height: 48px;
@@ -219,7 +213,7 @@ export const AmazonButton = styled.a`
   }
 `
 
-export const HeroCTA = styled.div`
+export const MainCTA = styled.div`
   width: 579px;
   display: flex;
   flex-direction: column;
@@ -241,7 +235,7 @@ export const HeroCTA = styled.div`
   }
 `
 
-export const HeroHead = styled.h1`
+export const MainHead = styled.h1`
   font-weight: 900;
   font-size: 48px;
   line-height: 60px;
@@ -255,7 +249,7 @@ export const HeroHead = styled.h1`
   }
 `
 
-export const HeroButtons = styled.div`
+export const MainButtons = styled.div`
   margin-top: 40px;
   display: flex;
   @media ${device.mobileS} {
@@ -324,7 +318,6 @@ export const Content = styled.div`
     margin-top: 48px;
   }
 `
-
 
 export const Card = styled.div`
   display: flex;
@@ -461,17 +454,17 @@ export const ProductStyle = styled.img`
   }
   @media ${device.laptop} {
     width: 100vw;
-    bottom: -168px;
-  }
-  @media ${device.tablet} {
-    bottom: -191px;
+    bottom: -250px;
   }
   @media ${device.mobile} {
     width: 120vw;
-    bottom: -218px;
+    bottom: -270px;
   }
-  @media ${device.mobile} {
-    bottom: -195px;
+  @media ${device.mobileM} {
+    bottom: -250px;
+  }
+  @media ${device.mobileS} {
+    bottom: -220px;
   }
 `
 
@@ -525,6 +518,7 @@ export const ProductText = styled.p`
     line-height: 18px;
   }
 `
+
 
 export const App = styled.div`
   padding: 80px 0px 80px 64px;
@@ -627,7 +621,7 @@ export const CombosCard = styled(AppCard)`
 `
 
 export const FavouritesCard = styled(AppCard)`
-  background: ${SOFT_YELLOW};
+  background: #F8F8F8;
   margin-top: 16px;
   @media ${device.laptop} {
     margin-top: 24px;
@@ -645,6 +639,7 @@ export const AppTextBold = styled.p`
   color: ${BLACK};
   margin-bottom: 4px;
 `
+
 
 export const Bottom = styled.div`
   background: ${SOFT_ORANGE};
@@ -729,7 +724,7 @@ export const MyFitRight = styled.p`
   }
 `
 
-export const EmailText = styled.p`
+export const EmailHead = styled.p`
   font-weight: bold;
   font-size: 14px;
   line-height: 24px;
@@ -741,8 +736,8 @@ export const Email = styled.input`
   margin-top: 12px;
   border: none;
   margin-bottom: 18px;
-  border-radius: 6px;
-  padding: 6px;
+  border-radius: 5px;
+  padding: 8px 12px;
 `
 
 export const EmailButton = styled.button`
@@ -752,9 +747,9 @@ export const EmailButton = styled.button`
   color: ${WHITE};
   text-align: center;
   background: ${PRIMARY};
-  border-radius: 6px;
   border: none;
-  padding: 2px 12px;
+  border-radius: 5px;
+  padding: 8px 24px;
   margin-bottom: 46px;
   cursor: pointer;
   @media ${device.mobile} {
