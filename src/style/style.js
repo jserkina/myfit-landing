@@ -24,7 +24,7 @@ export const Main = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  height: 720px;
+  height: 615px;
   overflow: hidden;
   @media ${device.tablet} {
     height: 580px;
@@ -91,7 +91,7 @@ export const MenuBlock = styled.div`
 export const MenuImage = styled.img`
   width: 100%;
   position: absolute;
-  top: -54px;
+  top: -150px;
   @media ${device.laptop} {
     width: 112%;
     top: 0px;
@@ -110,7 +110,6 @@ export const MenuImage = styled.img`
 `
 
 export const Box = styled.div`
-  align-self: center;
   display: flex;
   position: absolute;
   flex-direction: column;
@@ -168,7 +167,7 @@ export const ButtonPrimary = styled.a`
   color: ${WHITE};
   text-align: center;
   background: ${PRIMARY};
-  border-radius: 8px;
+  border-radius: 16px;
   text-decoration: none;
   padding: 17px 24px;
   cursor: pointer;
@@ -195,13 +194,8 @@ export const ButtonPrimaryMobile = styled.a`
   padding: 12px 16px;
 `
 
-export const AmazonButton = styled.a`
-  background: rgba(250, 69, 4, 0.2);
-  border-radius: 8px;
-  text-decoration: none;
-  padding: 22px 56px 14px;
-  margin-left: 20px;
-  cursor: pointer;
+export const AmazonButton = styled(ButtonPrimary)`
+  margin-left: 56px;
   @media ${device.mobile} {
     width: 160px;
     height: 48px;
@@ -219,6 +213,7 @@ export const MainCTA = styled.div`
   flex-direction: column;
   align-items: flex-start;
   margin-top: 176px;
+  margin-left: 40px;
   @media ${device.tablet} {
     margin-top: 80px;
     width: 541px;
@@ -236,6 +231,7 @@ export const MainCTA = styled.div`
 `
 
 export const MainHead = styled.h1`
+  font-family: 'FuturaHeavy';
   font-weight: 900;
   font-size: 48px;
   line-height: 60px;
@@ -280,11 +276,13 @@ export const Caption = styled.div`
 `
 
 export const TextHead = styled.h2`
+  font-family: 'FuturaHeavy';
   font-weight: 900;
   font-size: 36px;
   line-height: 45px;
   letter-spacing: 0.05em;
   color: ${BLACK};
+  text-transform: capitalize;
   @media ${device.mobile} {
     font-size: 32px;
     line-height: 40px;
@@ -297,7 +295,7 @@ export const CaptionText = styled.p`
   font-weight: normal;
   font-size: 16px;
   line-height: 28px;
-  color: ${DARK_GREY};
+  color: ${BLACK};
   margin-top: 16px;
   @media ${device.mobile} {
     font-size: 14px;
@@ -487,6 +485,7 @@ export const ProductCTA = styled.div`
 `
 
 export const ProductHead = styled.h2`
+  font-family: 'FuturaHeavy';
   font-weight: bold;
   font-size: 40px;
   line-height: 50px;
@@ -567,7 +566,8 @@ export const FramedHead = styled.div`
   }
 `
 
-export const AppHead = styled.h3`
+export const AppHead = styled.h2`
+  font-family: 'FuturaHeavy';
   font-weight: 900;
   font-size: 36px;
   line-height: 48px;

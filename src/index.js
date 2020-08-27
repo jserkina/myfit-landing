@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import './fonts/Futura-Heavy.ttf'
+import './fonts/Futura-medium.ttf'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(

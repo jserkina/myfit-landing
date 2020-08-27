@@ -21,7 +21,7 @@ import Dumbbell from './icons/Dumbbell.svg';
 import Video from './icons/Video.png';
 import PlayVideo from './icons/PlayVideo.svg';
 import MenuHero from './icons/MenuHero.png';
-import MainPhoto from './icons/MainPhoto.jpeg';
+import MainPhoto from './icons/MainPhoto.jpg';
 import ProductPhoto from './icons/ProductPhoto.jpeg'
 
 import * as S from './style/style.js';
@@ -41,7 +41,7 @@ export default class MyComponent extends Component {
                   Buy Now
                 </S.ButtonPrimaryMobile>
               </S.MobileMenu>
-              <S.NavigationMenu>
+              {/*<S.NavigationMenu>
                 <img src={LogoBig} />
                 <S.Menu>
                   <SectionLink section="why">
@@ -76,12 +76,12 @@ export default class MyComponent extends Component {
                 <S.ButtonPrimary href='https://www.amazon.com/'>
                   Buy Now
                 </S.ButtonPrimary>
-              </S.NavigationMenu>
+              </S.NavigationMenu>*/}
               <S.MainCTA>
                 <S.MainHead>The Resistance Workout Revolution</S.MainHead>
                 <S.CaptionText>Designed with personality and produced to the highest standards - MYFIT bands allows you to train your way, wherever you are.</S.CaptionText>
                 <S.MainButtons>
-                  <S.ButtonPrimary href='https://www.amazon.com/'>Explore More</S.ButtonPrimary>
+                  <S.ButtonPrimary href='https://www.amazon.com/'>Shop Now</S.ButtonPrimary>
                   <S.AmazonButton href='https://www.amazon.com/'>
                     <img src={AmazonName} />
                   </S.AmazonButton>
@@ -92,8 +92,8 @@ export default class MyComponent extends Component {
           <Section id="why">
             <S.Benefits>
               <S.Caption>
-                <S.TextHead>Why MyFit?</S.TextHead>
-                <S.CaptionText>MyFit are a UK brand providing unparalleled quality latex resistance bands allowing you to shred body fat and increase isolated muscle strength. Alongside the premium bands, we’ve created an app to provide exclusive curated content by industry professionals. This combination provides you with the ultimate solution to achieving your goals, wherever you are.</S.CaptionText>
+                <S.TextHead>Premium Resistance Bands</S.TextHead>
+                <S.CaptionText>MYFIT are a UK brand providing unparalleled quality latex resistance bands allowing you to shred body fat and increase isolated muscle strength. Alongside the premium bands, we’ve created an app to provide exclusive curated content by industry professionals. This combination provides you with the ultimate solution to achieving your goals, wherever you are.</S.CaptionText>
               </S.Caption>
               <S.Content>
                 <S.CardOne>
@@ -104,11 +104,11 @@ export default class MyComponent extends Component {
                 <S.CardTwo>
                   <img src={Phone} />
                   <S.CardTextBold>Exclusive app to help you achieve your goals. whatever they may be.</S.CardTextBold>
-                  <S.CardText>The MyFit app has exercises curated by industry professionals for all muscle groups. Regularly updated by experts.</S.CardText>
+                  <S.CardText>The MYFIT app has exercises curated by industry professionals for all muscle groups. Regularly updated by experts.</S.CardText>
                 </S.CardTwo>
                 <S.CardThree>
                   <img src={Leaf} />
-                  <S.CardTextBold>MyFit resistance bands are made from 100% natural latex. Naturally sourced.</S.CardTextBold>
+                  <S.CardTextBold>MYFIT resistance bands are made from 100% natural latex. Naturally sourced.</S.CardTextBold>
                   <S.CardText>Our latex has origins from the highest quality source, the hevea brasiliensis tree. This ensures durability in strength, as well as flexibility.</S.CardText>
                 </S.CardThree>
               </S.Content>
@@ -132,8 +132,8 @@ export default class MyComponent extends Component {
               <S.AppImage src={Image} alt='MyFit App'/>
               <S.AppCTA>
                 <S.FramedHead>
-                  <S.AppHead>Your MyFit App</S.AppHead>
-                  <S.CaptionText>The MyFit is your go-to for all resistance workouts created by qualified UK personal trainers. The app is regularly updated with new exercises to keep you on your toes.</S.CaptionText>
+                  <S.AppHead>Perfect workout. Everytime.</S.AppHead>
+                  <S.CaptionText>The MYFIT is your go-to for all resistance workouts created by qualified UK personal trainers. The app is regularly updated with new exercises to keep you on your toes.</S.CaptionText>
                 </S.FramedHead>
                 <S.AppBox>
                   <S.WorkoutCard>
@@ -158,12 +158,12 @@ export default class MyComponent extends Component {
                     </S.Framed>
                   </S.FavouritesCard>
                 </S.AppBox>
-                <S.ButtonPrimary href='https://www.amazon.com/'>Go to Application</S.ButtonPrimary>
+                {/*<S.ButtonPrimary href='https://www.amazon.com/'>Go to Application</S.ButtonPrimary>*/}
               </S.AppCTA>
             </S.App>
           </Section>
           <S.Bottom>
-            <S.TextHead>Order your MyFit bands now.</S.TextHead>
+            <S.TextHead>Order your MYFIT bands now.</S.TextHead>
             <S.BottomText>Join us in the resistance workout revolution.</S.BottomText>
             <S.OrderButton href='https://www.amazon.com/'>Get Started</S.OrderButton>
             <img src={Amazon} />
@@ -222,7 +222,7 @@ export default class MyComponent extends Component {
                 placeholder='Enter your email'
               />
               <S.EmailButton onClick={alert}>Sign Up</S.EmailButton>
-              <S.MyFitRight>© 2020 - MyFit, All right are reserved</S.MyFitRight>
+              <S.MyFitRight>© 2020 - MYFIT, All right are reserved</S.MyFitRight>
             </S.Footer>
           </Section>
         </ScrollingProvider>
