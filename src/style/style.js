@@ -155,7 +155,7 @@ export const Menu = styled.div`
 
 export const MenuButton = styled.a`
   font-weight: bold;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 18px;
   cursor: pointer;
 `
@@ -255,7 +255,7 @@ export const MainButtons = styled.div`
 
 
 export const Benefits = styled.div`
-  padding: 120px 0px;
+  padding: 100px 0px;
   text-align: center;
   display: flex;
   align-items: center;
@@ -324,6 +324,7 @@ export const Card = styled.div`
   height: 210px;
   width: 276px;
   padding: 16px 32px;
+  background: #F8F8F8;
   @media ${device.laptop} {
     padding: 16px 24px;
   }
@@ -336,12 +337,10 @@ export const Card = styled.div`
 `
 
 export const CardOne = styled(Card)`
-  background: ${SOFT_YELLOW};
   border-radius: 8px;
 `
 
 export const CardTwo = styled(Card)`
-  background: ${SOFT_PINK};
   border-radius: 8px;
   margin: 0px 80px;
   @media ${device.laptop} {
@@ -354,7 +353,6 @@ export const CardTwo = styled(Card)`
 `
 
 export const CardThree = styled(Card)`
-  background: ${SOFT_ORANGE};
   border-radius: 8px;
   @media ${device.laptop} {
     margin-top: 40px;
@@ -386,6 +384,8 @@ export const ProductBlock = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
+  overflow: hidden;
+  height: 1135px;
   @media ${device.laptop} {
     padding: 53px 34px;
   }
@@ -416,15 +416,21 @@ export const LightBlock = styled.div`
   }
 `
 
+export const FullKitStyle = styled.img`
+  width: 100%;
+  position: relative;
+  top: -300px;
+`
+
 export const DarkBlock = styled.div`
   width: 100vw;
   height: 598px;
   background: ${BLACK};
-  position: absolute;
-  bottom: 56px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  position: relative;
+  top: -300px;
+  justify-content: space-between;
   @media ${device.laptop} {
     height: 342px;
     width: 640px;
@@ -443,10 +449,7 @@ export const DarkBlock = styled.div`
 `
 
 export const ProductStyle = styled.img`
-  width:  56.5vw;
   height: 100%;
-  position: absolute;
-  right: 0;
   @media ${device.laptopL} {
     object-fit: contain;
   }
@@ -467,12 +470,11 @@ export const ProductStyle = styled.img`
 `
 
 export const ProductCTA = styled.div`
-  width: 350px;
+  width: 460px;
+  margin-left: 40px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  position: relative;
-  right: 350px;
   @media ${device.laptop} {
     align-items: center;
     width: 482px;
@@ -506,6 +508,10 @@ export const ProductHead = styled.h2`
   }
 `
 
+export const ProductHeadWhite = styled(ProductHead)`
+  color: ${WHITE};
+`
+
 export const ProductText = styled.p`
   font-weight: 500;
   font-size: 16px;
@@ -520,7 +526,7 @@ export const ProductText = styled.p`
 
 
 export const App = styled.div`
-  padding: 80px 0px 80px 64px;
+  padding: 80px 0px 0px 64px;
   display: flex;
   align-items: center;
   @media ${device.laptop} {
@@ -642,7 +648,6 @@ export const AppTextBold = styled.p`
 
 
 export const Bottom = styled.div`
-  background: ${SOFT_ORANGE};
   width: 100vw;
   padding: 48px 0px;
   display: flex;
@@ -664,12 +669,13 @@ export const OrderButton = styled(ButtonPrimary)`
 `
 
 export const Footer = styled.div`
-  background: ${BLACK};
+  background: #000000db;
   width: 100vw;
-  padding: 36px 0px 40px;
+  padding-top: 76px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
+  overflow: hidden;
   @media ${device.mobile} {
     padding: 24px 0px;
   }
@@ -677,10 +683,9 @@ export const Footer = styled.div`
 
 export const Container = styled.div`
   display: flex;
-  align-items: start;
-  width: 61.5vw;
-  justify-content: space-between;
-  position: absolute;
+  align-items: center;
+  margin-bottom: 40px;
+  width: 90%;
   @media ${device.laptop} {
     margin-bottom: 32px;
     width: calc(100vw - 80px);
@@ -692,12 +697,14 @@ export const Container = styled.div`
 `
 
 export const MenuFooter = styled.div`
-  width: 374px;
   display: flex;
-  justify-content: space-between;
   color: ${WHITE};
-  align-items: center;
-  height: 32px;
+  flex-direction: column;
+  align-items: start;
+  margin-left: 40px;
+  height: 86px;
+  width: 80px;
+  justify-content: space-between;
   @media ${device.mobile} {
     width: calc(100vw - 40px);
   }
@@ -708,49 +715,69 @@ export const Socials = styled.div`
   opacity: 0.8;
   display: flex;
   justify-content: space-between;
+  margin-left: 60px;
 `
 
 export const MyFitRight = styled.p`
-  font-family: Poppins;
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
-  color: ${WHITE};
-  opacity: 0.4;
+  color: #ffffff6b;
   align-self: flex-start;
-  margin-left: 40px;
+  background: #000000;
+  width: 100vw;
+  padding: 8px 40px 20px;
   @media ${device.mobile} {
     margin-left: 20px;
   }
 `
 
-export const EmailHead = styled.p`
+export const FooterAddress = styled.p`
   font-weight: bold;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   color: ${WHITE};
-  margin-top: 32px;
+  width: 222px;
+  margin: 0px 120px;
+`
+
+export const EmailBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+`
+export const EmailHead = styled.p`
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
+  color: ${WHITE};
+`
+
+export const EmailText = styled.p`
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: ${WHITE};
+  margin-bottom: 20px;
 `
 
 export const Email = styled.input`
-  margin-top: 12px;
-  border: none;
-  margin-bottom: 18px;
-  border-radius: 5px;
-  padding: 8px 12px;
+  background: #0000001c;
+  font-size: 14px;
+  line-height: 20px;
+  border-width: 1px 0px 1px 1px;
+  width: 300px;
 `
 
 export const EmailButton = styled.button`
   font-weight: bold;
   font-size: 14px;
   line-height: 24px;
-  color: ${WHITE};
+  color: ${BLACK};
   text-align: center;
-  background: ${PRIMARY};
+  background: ${WHITE};
   border: none;
-  border-radius: 5px;
-  padding: 8px 24px;
-  margin-bottom: 46px;
+  padding: 0px 16px;
   cursor: pointer;
   @media ${device.mobile} {
     margin-bottom: 42px;

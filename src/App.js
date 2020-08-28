@@ -22,7 +22,8 @@ import Video from './icons/Video.png';
 import PlayVideo from './icons/PlayVideo.svg';
 import MenuHero from './icons/MenuHero.png';
 import MainPhoto from './icons/MainPhoto.jpg';
-import ProductPhoto from './icons/ProductPhoto.jpeg'
+import ProductPhoto from './icons/ProductPhoto.jpg';
+import FullKit from './icons/FullKit.jpg';
 
 import * as S from './style/style.js';
 
@@ -116,15 +117,16 @@ export default class MyComponent extends Component {
           </Section>
           <Section id="product">
             <S.ProductBlock>
-              <S.LightBlock></S.LightBlock>
+              <S.FullKitStyle src={FullKit} alt='MYFIT Full Kit' />
               <S.DarkBlock>
                 <S.ProductCTA>
-                  <S.ProductHead>No Breakage. No Excuses.</S.ProductHead>
+                  <S.ProductHeadWhite>Durable. Versatile.</S.ProductHeadWhite>
+                  <S.ProductHead>100% Fit for purpose.</S.ProductHead>
                   <S.ProductText>These 11 piece set will enable you to replicate your favourite gym workouts without compromising on the resistance. You’ve got all you need to achieve your fitness goals.</S.ProductText>
                   <S.ButtonPrimary href='https://www.amazon.com/'>Shop Now</S.ButtonPrimary>
                 </S.ProductCTA>
+                <S.ProductStyle src={ProductPhoto} alt='MYFIT Handband' />
               </S.DarkBlock>
-              <S.ProductStyle src={ProductPhoto} alt='Shavron Massage Gun' />
             </S.ProductBlock>
           </Section>
           <Section id="app">
@@ -164,14 +166,35 @@ export default class MyComponent extends Component {
           </Section>
           <S.Bottom>
             <S.TextHead>Order your MYFIT bands now.</S.TextHead>
-            <S.BottomText>Join us in the resistance workout revolution.</S.BottomText>
-            <S.OrderButton href='https://www.amazon.com/'>Get Started</S.OrderButton>
+            <S.OrderButton href='https://www.amazon.com/'>Shop Now</S.OrderButton>
             <img src={Amazon} />
           </S.Bottom>
           <Section id="contact">
             <S.Footer>
               <S.Container>
-                <img src={Logo} />
+                <S.MenuFooter>
+                  <SectionLink section="why">
+                    {({ onClick, isSelected }) => (
+                      <S.MenuButton onClick={onClick} selected={isSelected}>
+                        About Us
+                      </S.MenuButton>
+                    )}
+                  </SectionLink>
+                  <SectionLink section="product">
+                    {({ onClick, isSelected }) => (
+                      <S.MenuButton onClick={onClick} selected={isSelected}>
+                        Shop Now
+                      </S.MenuButton>
+                    )}
+                  </SectionLink>
+                  <SectionLink section="contact">
+                    {({ onClick, isSelected }) => (
+                      <S.MenuButton onClick={onClick} selected={isSelected}>
+                        Contact
+                      </S.MenuButton>
+                    )}
+                  </SectionLink>
+                </S.MenuFooter>
                 <S.Socials>
                   <a href='https://twitter.com/'>
                     <img src={Twitter} />
@@ -183,45 +206,21 @@ export default class MyComponent extends Component {
                     <img src={Instagram} />
                   </a>
                 </S.Socials>
+                <S.FooterAddress>Digimoat Limited (12539477), 64 Nile Street, International House, London, N1 7SR, United Kingdom. contact@my-fit.io</S.FooterAddress>
+                <S.EmailBox>
+                  <S.EmailHead>Be part of the MYFIT Community</S.EmailHead>
+                  <S.EmailText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mattis libero eget quam placerat commodo.</S.EmailText>
+                  <div>
+                    <S.Email
+                      type='email'
+                      id="email"
+                      name="email"
+                      placeholder='Enter your email'
+                    />
+                    <S.EmailButton onClick={alert}>Sign Up</S.EmailButton>
+                  </div>
+                </S.EmailBox>
               </S.Container>
-              <S.MenuFooter>
-                <SectionLink section="why">
-                  {({ onClick, isSelected }) => (
-                    <S.MenuButton onClick={onClick} selected={isSelected}>
-                      Why
-                    </S.MenuButton>
-                  )}
-                </SectionLink>
-                <SectionLink section="product">
-                  {({ onClick, isSelected }) => (
-                    <S.MenuButton onClick={onClick} selected={isSelected}>
-                      Product
-                    </S.MenuButton>
-                  )}
-                </SectionLink>
-                <SectionLink section="app">
-                  {({ onClick, isSelected }) => (
-                    <S.MenuButton onClick={onClick} selected={isSelected}>
-                      App
-                    </S.MenuButton>
-                  )}
-                </SectionLink>
-                <SectionLink section="contact">
-                  {({ onClick, isSelected }) => (
-                    <S.MenuButton onClick={onClick} selected={isSelected}>
-                      Contact
-                    </S.MenuButton>
-                  )}
-                </SectionLink>
-              </S.MenuFooter>
-              <S.EmailHead>SIGN UP TO OUR NEWSLETTER</S.EmailHead>
-              <S.Email
-                type='email'
-                id="email"
-                name="email"
-                placeholder='Enter your email'
-              />
-              <S.EmailButton onClick={alert}>Sign Up</S.EmailButton>
               <S.MyFitRight>© 2020 - MYFIT, All right are reserved</S.MyFitRight>
             </S.Footer>
           </Section>
