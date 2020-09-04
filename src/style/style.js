@@ -27,7 +27,7 @@ export const Main = styled.div`
   height: 615px;
   overflow: hidden;
   @media ${device.tablet} {
-    height: 580px;
+    height: 545px;
   }
   @media ${device.mobile} {
     height: 540px;
@@ -94,7 +94,10 @@ export const MenuImage = styled.img`
   top: -150px;
   @media ${device.laptop} {
     width: 112%;
-    top: 0px;
+    top: -43px;
+  }
+  @media ${device.tablet} {
+    width: 115%;
   }
   @media ${device.mobile} {
     width: 171%;
@@ -114,6 +117,7 @@ export const Box = styled.div`
   position: absolute;
   flex-direction: column;
   align-items: start;
+  align-self: center;
 `
 
 export const MobileMenu = styled.div`
@@ -167,7 +171,7 @@ export const ButtonPrimary = styled.a`
   color: ${WHITE};
   text-align: center;
   background: ${PRIMARY};
-  border-radius: 16px;
+  border-radius: 8px;
   text-decoration: none;
   padding: 17px 24px;
   cursor: pointer;
@@ -196,6 +200,8 @@ export const ButtonPrimaryMobile = styled.a`
 
 export const AmazonButton = styled(ButtonPrimary)`
   margin-left: 56px;
+  background: rgba(250, 69, 4, 0.2);
+  padding: 19px 24px 16px;
   @media ${device.mobile} {
     width: 160px;
     height: 48px;
@@ -213,7 +219,6 @@ export const MainCTA = styled.div`
   flex-direction: column;
   align-items: flex-start;
   margin-top: 176px;
-  margin-left: 40px;
   @media ${device.tablet} {
     margin-top: 80px;
     width: 541px;
@@ -242,6 +247,21 @@ export const MainHead = styled.h1`
     font-size: 32px;
     line-height: 40px;
     letter-spacing: 0em;
+  }
+`
+export const MainText = styled.p`
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  color: ${BLACK};
+  margin-top: 16px;
+  @media ${device.laptop} {
+    width: 81%;
+  }
+  @media ${device.mobile} {
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 8px;
   }
 `
 
@@ -291,16 +311,9 @@ export const TextHead = styled.h2`
   }
 `
 
-export const CaptionText = styled.p`
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 28px;
-  color: ${BLACK};
-  margin-top: 16px;
-  @media ${device.mobile} {
-    font-size: 14px;
-    line-height: 24px;
-    margin-top: 8px;
+export const CaptionText = styled(MainText)`
+  @media ${device.laptop} {
+    width: 100%;
   }
 `
 
@@ -387,7 +400,10 @@ export const ProductBlock = styled.div`
   overflow: hidden;
   height: 1135px;
   @media ${device.laptop} {
-    padding: 53px 34px;
+    height: 894px;
+  }
+  @media ${device.tablet} {
+    height: 796px;
   }
   @media ${device.mobile} {
     overflow: hidden;
@@ -420,6 +436,12 @@ export const FullKitStyle = styled.img`
   width: 100%;
   position: relative;
   top: -300px;
+  @media ${device.laptop} {
+    top: -200px;
+  }
+  @media ${device.tablet} {
+    top: -150px;
+  }
 `
 
 export const DarkBlock = styled.div`
@@ -432,14 +454,12 @@ export const DarkBlock = styled.div`
   top: -300px;
   justify-content: space-between;
   @media ${device.laptop} {
-    height: 342px;
-    width: 640px;
-    top: 86px;
-    left: 200px;
-    border-radius: 8px;
+    height: 500px;
+    top: -200px;
+    justify-content: flex-end;
   }
   @media ${device.tablet} {
-    left: 64px;
+    top: -150px;
   }
   @media ${device.mobile} {
     width: calc(100vw - 32px);
@@ -452,10 +472,6 @@ export const ProductStyle = styled.img`
   height: 100%;
   @media ${device.laptopL} {
     object-fit: contain;
-  }
-  @media ${device.laptop} {
-    width: 100vw;
-    bottom: -250px;
   }
   @media ${device.mobile} {
     width: 120vw;
@@ -476,10 +492,12 @@ export const ProductCTA = styled.div`
   flex-direction: column;
   align-items: flex-start;
   @media ${device.laptop} {
-    align-items: center;
-    width: 482px;
-    text-align: center;
-    right: 0px;
+    position: absolute;
+    left: 0px;
+  }
+  @media ${device.tablet} {
+    width: 90%;
+    bottom: 42px;
   }
   @media ${device.mobile} {
     width: calc(100% - 32px);
@@ -518,12 +536,15 @@ export const ProductText = styled.p`
   line-height: 24px;
   color: ${GREY};
   margin: 12px 0px 48px;
+  @media ${device.tablet} {
+    margin-top: 96px;
+    width: 62%;
+  }
   @media ${device.mobileS} {
     font-size: 14px;
     line-height: 18px;
   }
 `
-
 
 export const App = styled.div`
   padding: 80px 0px 0px 64px;
@@ -531,7 +552,7 @@ export const App = styled.div`
   align-items: center;
   @media ${device.laptop} {
     flex-direction: column-reverse;
-    padding: 80px 0px 120px;
+    padding: 80px 0px 80px;
   }
   @media ${device.mobile} {
     padding: 40px 0px 64px;
@@ -542,7 +563,7 @@ export const AppImage = styled.img`
   width: calc(50vw - 64px);
   @media ${device.laptop} {
     width: 100%;
-    margin-top: 120px;
+    margin-top: 80px;
   }
   @media ${device.mobile} {
     margin-top: 64px;
@@ -646,6 +667,10 @@ export const AppTextBold = styled.p`
   margin-bottom: 4px;
 `
 
+export const AppText = styled(CardText)`
+  margin-top: 16px;
+  width: 56%;
+`
 
 export const Bottom = styled.div`
   width: 100vw;
@@ -685,11 +710,10 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 40px;
-  width: 90%;
+  width: 100%;
+  justify-content: space-between;
   @media ${device.laptop} {
     margin-bottom: 32px;
-    width: calc(100vw - 80px);
-    position: static;
   }
   @media ${device.mobile} {
     width: calc(100vw - 40px);
@@ -705,6 +729,9 @@ export const MenuFooter = styled.div`
   height: 86px;
   width: 80px;
   justify-content: space-between;
+  @media ${device.tablet} {
+    margin-left: 20px;
+  }
   @media ${device.mobile} {
     width: calc(100vw - 40px);
   }
@@ -715,7 +742,11 @@ export const Socials = styled.div`
   opacity: 0.8;
   display: flex;
   justify-content: space-between;
-  margin-left: 60px;
+  @media ${device.tablet} {
+    flex-direction: column;
+    width: min-content;
+  }
+
 `
 
 export const MyFitRight = styled.p`
@@ -739,12 +770,18 @@ export const FooterAddress = styled.p`
   color: ${WHITE};
   width: 222px;
   margin: 0px 120px;
+  @media ${device.laptop} {
+    margin: 0px;
+  }
 `
 
 export const EmailBox = styled.div`
   display: flex;
   flex-direction: column;
   width: 40%;
+  @media ${device.tablet} {
+    margin-right: 20px;
+  }
 `
 export const EmailHead = styled.p`
   font-weight: bold;
@@ -758,7 +795,8 @@ export const EmailText = styled.p`
   font-size: 14px;
   line-height: 18px;
   color: ${WHITE};
-  margin-bottom: 20px;
+  margin: 8px 0px 20px;
+  width: 80%;
 `
 
 export const Email = styled.input`
@@ -766,7 +804,7 @@ export const Email = styled.input`
   font-size: 14px;
   line-height: 20px;
   border-width: 1px 0px 1px 1px;
-  width: 300px;
+  width: 70%;
 `
 
 export const EmailButton = styled.button`

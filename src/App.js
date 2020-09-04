@@ -42,7 +42,7 @@ export default class MyComponent extends Component {
                   Buy Now
                 </S.ButtonPrimaryMobile>
               </S.MobileMenu>
-              {/*<S.NavigationMenu>
+              <S.NavigationMenu>
                 <img src={LogoBig} />
                 <S.Menu>
                   <SectionLink section="why">
@@ -77,10 +77,10 @@ export default class MyComponent extends Component {
                 <S.ButtonPrimary href='https://www.amazon.com/'>
                   Buy Now
                 </S.ButtonPrimary>
-              </S.NavigationMenu>*/}
+              </S.NavigationMenu>
               <S.MainCTA>
                 <S.MainHead>The Resistance Workout Revolution</S.MainHead>
-                <S.CaptionText>Designed with personality and produced to the highest standards - MYFIT bands allows you to train your way, wherever you are.</S.CaptionText>
+                <S.MainText>Designed with personality and produced to the highest standards - MYFIT bands allows you to train your way, wherever you are.</S.MainText>
                 <S.MainButtons>
                   <S.ButtonPrimary href='https://www.amazon.com/'>Shop Now</S.ButtonPrimary>
                   <S.AmazonButton href='https://www.amazon.com/'>
@@ -122,7 +122,7 @@ export default class MyComponent extends Component {
                 <S.ProductCTA>
                   <S.ProductHeadWhite>Durable. Versatile.</S.ProductHeadWhite>
                   <S.ProductHead>100% Fit for purpose.</S.ProductHead>
-                  <S.ProductText>These 11 piece set will enable you to replicate your favourite gym workouts without compromising on the resistance. You’ve got all you need to achieve your fitness goals.</S.ProductText>
+                  <S.ProductText>All bodies are unique. Whether you want to shred fat or tone muscle groups, we've got your back. Join the resistance workout revolution.</S.ProductText>
                   <S.ButtonPrimary href='https://www.amazon.com/'>Shop Now</S.ButtonPrimary>
                 </S.ProductCTA>
                 <S.ProductStyle src={ProductPhoto} alt='MYFIT Handband' />
@@ -135,7 +135,7 @@ export default class MyComponent extends Component {
               <S.AppCTA>
                 <S.FramedHead>
                   <S.AppHead>Perfect workout. Everytime.</S.AppHead>
-                  <S.CaptionText>The MYFIT is your go-to for all resistance workouts created by qualified UK personal trainers. The app is regularly updated with new exercises to keep you on your toes.</S.CaptionText>
+                  <S.CaptionText>The MYFIT app is your go-to for all resistance workouts created by qualified UK personal trainers. The app is regularly updated with new exercises to keep you on your toes.</S.CaptionText>
                 </S.FramedHead>
                 <S.AppBox>
                   <S.WorkoutCard>
@@ -148,7 +148,7 @@ export default class MyComponent extends Component {
                   <S.CombosCard>
                     <img src={Dumbbell} />
                     <S.Framed>
-                      <S.AppTextBold>Combos</S.AppTextBold>
+                      <S.AppTextBold>Combos(coming soon)</S.AppTextBold>
                       <S.CardText>Whatever you’re working on, we’ve curated combo videos which puts together a set of workout plans for specific muscle groups.</S.CardText>
                     </S.Framed>
                   </S.CombosCard>
@@ -159,6 +159,7 @@ export default class MyComponent extends Component {
                       <S.CardText>Want to curate your own workout plans? You can favourite your preferred workouts and collate a playlist of workouts for yourself.</S.CardText>
                     </S.Framed>
                   </S.FavouritesCard>
+                  <S.AppText>You will receive the app link on a card with the MYFIT bands when purchased*</S.AppText>
                 </S.AppBox>
                 {/*<S.ButtonPrimary href='https://www.amazon.com/'>Go to Application</S.ButtonPrimary>*/}
               </S.AppCTA>
@@ -209,7 +210,7 @@ export default class MyComponent extends Component {
                 <S.FooterAddress>Digimoat Limited (12539477), 64 Nile Street, International House, London, N1 7SR, United Kingdom. contact@my-fit.io</S.FooterAddress>
                 <S.EmailBox>
                   <S.EmailHead>Be part of the MYFIT Community</S.EmailHead>
-                  <S.EmailText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mattis libero eget quam placerat commodo.</S.EmailText>
+                  <S.EmailText>There is always something happening in the MYFIT Community. Subscribe to our newsletter bellow. Then you are always the first to get the latest fitness tips, special offers, and other awesome stuff from us.</S.EmailText>
                   <div>
                     <S.Email
                       type='email'
