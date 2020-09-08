@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Reset } from 'reset-css';
-import { Player } from 'video-react';
 import { ScrollingProvider, SectionLink, Section } from 'react-scroll-section';
+import ContactUs from './pages/ContactUs.js';
 
 import Leaf from './icons/Leaf.svg';
 import Phone from './icons/Phone.svg';
@@ -18,9 +18,7 @@ import Facebook from './icons/Facebook.svg';
 import Instagram from './icons/Instagram.svg';
 import Image from './icons/App.png';
 import Dumbbell from './icons/Dumbbell.svg';
-import Video from './icons/Video.png';
 import PlayVideo from './icons/PlayVideo.svg';
-import MenuHero from './icons/MenuHero.png';
 import MainPhoto from './icons/MainPhoto.jpg';
 import ProductPhoto from './icons/ProductPhoto.jpg';
 import FullKit from './icons/FullKit.jpg';
@@ -226,6 +224,7 @@ export default class MyComponent extends Component {
             </S.Footer>
           </Section>
         </ScrollingProvider>
+        <ContactUs />
       </S.Bg>
     );
   }
