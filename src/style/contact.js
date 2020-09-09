@@ -54,6 +54,7 @@ export const Input = styled.input`
   height: 60px;
   padding-left: 16px;
   margin-bottom: 18px;
+  font-family: "FuturaMedium";
 `
 export const Select = styled.select`
   background: #F8F8F8;
@@ -66,6 +67,7 @@ export const Select = styled.select`
   padding-left: 16px;
   margin-bottom: 18px;
   color: #7d7d7d;
+  font-family: "FuturaMedium";
 `
 
 export const TextArea = styled.textarea`
@@ -78,6 +80,7 @@ export const TextArea = styled.textarea`
   height: 60px;
   padding-left: 16px;
   margin-bottom: 32px;
+  font-family: "FuturaMedium";
 `
 
 export const FormButton = styled.input`
@@ -89,7 +92,7 @@ export const FormButton = styled.input`
   font-family: "FuturaHeavy";
   border: none;
   width: min-content;
-  border-radius: 2px;
+  border-radius: 8px;
   padding: 17px 24px;
   cursor: pointer;
 `
@@ -98,8 +101,8 @@ export const FullKitStyle = styled.img`
   width: 100%;
   transform: rotate(-46deg);
   position: absolute;
-  right: -433px;
-  top: 122px;
+  right: -415px;
+  top: 278px;
 `
 
 export const Footer = styled.div`

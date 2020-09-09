@@ -102,7 +102,7 @@ export default class MyComponent extends Component {
                 </S.CardOne>
                 <S.CardTwo>
                   <img src={Phone} />
-                  <S.CardTextBold>Exclusive app to help you achieve your goals. whatever they may be.</S.CardTextBold>
+                  <S.CardTextBold>Exclusive app to help you achieve your goals. Whatever they may be.</S.CardTextBold>
                   <S.CardText>The MYFIT app has exercises curated by industry professionals for all muscle groups. Regularly updated by experts.</S.CardText>
                 </S.CardTwo>
                 <S.CardThree>
@@ -146,7 +146,7 @@ export default class MyComponent extends Component {
                   <S.CombosCard>
                     <img src={Dumbbell} />
                     <S.Framed>
-                      <S.AppTextBold>Combos(coming soon)</S.AppTextBold>
+                      <S.AppTextBold>Combos (coming soon)</S.AppTextBold>
                       <S.CardText>Whatever you’re working on, we’ve curated combo videos which puts together a set of workout plans for specific muscle groups.</S.CardText>
                     </S.Framed>
                   </S.CombosCard>

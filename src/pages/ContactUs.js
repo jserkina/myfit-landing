@@ -71,7 +71,7 @@ class ContactUs extends React.Component {
               name='text'
               placeholder='Your Question'
             />
-            <S.FormButton type='submit' value="SEND MY QUESTION" />
+            <S.FormButton type='submit' value="Submit" />
           </S.ContactForm>
         </S.ContactBox>
       </S.Bg>

@@ -621,6 +621,7 @@ export const AppCard = styled.div`
   padding: 20px 24px;
   border-radius: 8px;
   display: flex;
+  background: #F8F8F8;
   @media ${device.laptop} {
     padding: 20px 20px 20px 25px;
     width: 42%;
@@ -631,11 +632,10 @@ export const AppCard = styled.div`
 `
 
 export const WorkoutCard = styled(AppCard)`
-  background: ${SOFT_ORANGE};
+
 `
 
 export const CombosCard = styled(AppCard)`
-  background: #F8F8F8;
   margin-top: 16px;
   @media ${device.laptop} {
     margin-top: 0px;
@@ -648,7 +648,6 @@ export const CombosCard = styled(AppCard)`
 `
 
 export const FavouritesCard = styled(AppCard)`
-  background: #F8F8F8;
   margin-top: 16px;
   @media ${device.laptop} {
     margin-top: 24px;
