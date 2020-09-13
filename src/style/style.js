@@ -101,7 +101,7 @@ export const MenuImage = styled.img`
   }
   @media ${device.mobile} {
     width: 171%;
-    top: 56px;
+    top: 42px;
     right: -70px;
   }
   @media ${device.mobileM} {
@@ -333,16 +333,18 @@ export const Content = styled.div`
 export const Card = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   height: 210px;
   width: 276px;
   padding: 16px 32px;
   background: #F8F8F8;
+  border-radius: 8px;
   @media ${device.laptop} {
     padding: 16px 24px;
   }
   @media ${device.mobile} {
     padding: 16px 32px;
+    justify-content: center;
   }
   @media ${device.mobileS} {
     width: calc(100vw - 104px);
@@ -350,11 +352,10 @@ export const Card = styled.div`
 `
 
 export const CardOne = styled(Card)`
-  border-radius: 8px;
+
 `
 
 export const CardTwo = styled(Card)`
-  border-radius: 8px;
   margin: 0px 80px;
   @media ${device.laptop} {
     margin-left: 40px;
@@ -366,7 +367,6 @@ export const CardTwo = styled(Card)`
 `
 
 export const CardThree = styled(Card)`
-  border-radius: 8px;
   @media ${device.laptop} {
     margin-top: 40px;
   }
@@ -406,41 +406,22 @@ export const ProductBlock = styled.div`
     height: 796px;
   }
   @media ${device.mobile} {
-    overflow: hidden;
-  }
-`
-
-export const LightBlock = styled.div`
-  width: 61.5vw;;
-  height: 720px;
-  background: ${SOFT_ORANGE};
-  border-radius: 8px;
-  transform: rotate(3deg);
-  align-self: center;
-  @media ${device.laptop} {
-    width: 640px;
-    height: 1070px;
-    transform: rotate(4deg);
-  }
-  @media ${device.tablet} {
-    height: 868px;
-  }
-  @media ${device.mobile} {
-    width: 375px;
-    height: 688px;
-    transform: rotate(6deg);
+    height: 654px;
   }
 `
 
 export const FullKitStyle = styled.img`
   width: 100%;
   position: relative;
-  top: -300px;
+  top: -280px;
   @media ${device.laptop} {
     top: -200px;
   }
   @media ${device.tablet} {
     top: -150px;
+  }
+  @media ${device.mobile} {
+    top: -80px;
   }
 `
 
@@ -462,9 +443,8 @@ export const DarkBlock = styled.div`
     top: -150px;
   }
   @media ${device.mobile} {
-    width: calc(100vw - 32px);
-    height: 384px;
-    left: 16px;
+    top: -80px;
+    height: 486px;
   }
 `
 
@@ -475,13 +455,6 @@ export const ProductStyle = styled.img`
   }
   @media ${device.mobile} {
     width: 120vw;
-    bottom: -270px;
-  }
-  @media ${device.mobileM} {
-    bottom: -250px;
-  }
-  @media ${device.mobileS} {
-    bottom: -220px;
   }
 `
 
@@ -500,7 +473,8 @@ export const ProductCTA = styled.div`
     bottom: 42px;
   }
   @media ${device.mobile} {
-    width: calc(100% - 32px);
+    width: 100%;
+    bottom: 16px;
   }
 `
 
@@ -555,7 +529,7 @@ export const App = styled.div`
     padding: 80px 0px 80px;
   }
   @media ${device.mobile} {
-    padding: 40px 0px 64px;
+    padding: 40px 0px 21px;
   }
 `
 
@@ -566,7 +540,7 @@ export const AppImage = styled.img`
     margin-top: 80px;
   }
   @media ${device.mobile} {
-    margin-top: 64px;
+    margin-top: 16px;
   }
 `
 
@@ -669,6 +643,9 @@ export const AppTextBold = styled.p`
 export const AppText = styled(CardText)`
   margin-top: 16px;
   width: 56%;
+  @media ${device.mobile} {
+    width: 90%;
+  }
 `
 
 export const Bottom = styled.div`
@@ -701,7 +678,7 @@ export const Footer = styled.div`
   align-items: start;
   overflow: hidden;
   @media ${device.mobile} {
-    padding: 24px 0px;
+
   }
 `
 
@@ -714,19 +691,22 @@ export const Container = styled.div`
   @media ${device.laptop} {
     margin-bottom: 32px;
   }
+  @media ${device.tablet} {
+    flex-wrap: wrap;
+  }
   @media ${device.mobile} {
-    width: calc(100vw - 40px);
+    flex-direction: column;
+    flex-wrap: nowrap;
   }
 `
 
 export const MenuFooter = styled.div`
   display: flex;
-  color: ${WHITE};
   flex-direction: column;
   align-items: start;
   margin-left: 40px;
-  height: 86px;
-  width: 80px;
+  height: 92px;
+  width: 160px;
   justify-content: space-between;
   @media ${device.tablet} {
     margin-left: 20px;
@@ -734,6 +714,10 @@ export const MenuFooter = styled.div`
   @media ${device.mobile} {
     width: calc(100vw - 40px);
   }
+`
+export const FooterButton = styled(MenuButton)`
+  color: ${WHITE};
+  text-decoration: none;
 `
 
 export const Socials = styled.div`
@@ -741,25 +725,6 @@ export const Socials = styled.div`
   opacity: 0.8;
   display: flex;
   justify-content: space-between;
-  @media ${device.tablet} {
-    flex-direction: column;
-    width: min-content;
-  }
-
-`
-
-export const MyFitRight = styled.p`
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 24px;
-  color: #ffffff6b;
-  align-self: flex-start;
-  background: #000000;
-  width: 100vw;
-  padding: 8px 40px 20px;
-  @media ${device.mobile} {
-    margin-left: 20px;
-  }
 `
 
 export const FooterAddress = styled.p`
@@ -772,6 +737,9 @@ export const FooterAddress = styled.p`
   @media ${device.laptop} {
     margin: 0px;
   }
+  @media ${device.tablet} {
+    margin-right: 20px;
+  }
 `
 
 export const EmailBox = styled.div`
@@ -779,7 +747,9 @@ export const EmailBox = styled.div`
   flex-direction: column;
   width: 40%;
   @media ${device.tablet} {
-    margin-right: 20px;
+    width: 75%;
+    margin-left: 20px;
+    margin-top: 16px;
   }
 `
 export const EmailHead = styled.p`
@@ -819,4 +789,15 @@ export const EmailButton = styled.button`
   @media ${device.mobile} {
     margin-bottom: 42px;
   }
+`
+
+export const MyFitRight = styled.p`
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff6b;
+  align-self: flex-start;
+  background: #000000;
+  width: 100vw;
+  padding: 8px 40px 20px;
 `

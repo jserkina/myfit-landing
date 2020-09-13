@@ -172,27 +172,15 @@ export default class MyComponent extends Component {
             <S.Footer>
               <S.Container>
                 <S.MenuFooter>
-                  <SectionLink section="why">
-                    {({ onClick, isSelected }) => (
-                      <S.MenuButton onClick={onClick} selected={isSelected}>
-                        About Us
-                      </S.MenuButton>
-                    )}
-                  </SectionLink>
-                  <SectionLink section="product">
-                    {({ onClick, isSelected }) => (
-                      <S.MenuButton onClick={onClick} selected={isSelected}>
-                        Shop Now
-                      </S.MenuButton>
-                    )}
-                  </SectionLink>
-                  <SectionLink section="contact">
-                    {({ onClick, isSelected }) => (
-                      <S.MenuButton onClick={onClick} selected={isSelected}>
-                        Contact
-                      </S.MenuButton>
-                    )}
-                  </SectionLink>
+                  <S.FooterButton href='https://www.amazon.com/'>
+                    Shop Now
+                  </S.FooterButton>
+                  <S.FooterButton>
+                    Contact
+                  </S.FooterButton>
+                  <S.FooterButton>
+                    Terms and Privacy Policy
+                  </S.FooterButton>
                 </S.MenuFooter>
                 <S.Socials>
                   <a href='https://twitter.com/'>
@@ -224,7 +212,7 @@ export default class MyComponent extends Component {
             </S.Footer>
           </Section>
         </ScrollingProvider>
-        <ContactUs />
+        {/*<ContactUs />*/}
       </S.Bg>
     );
   }
