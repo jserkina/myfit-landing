@@ -13,3 +13,8 @@ body {
   font-family: 'FuturaMedium';
   src: local('FuturaMedium'), url(./fonts/Futura-medium.ttf) format('truetype');
 }
+
+@font-face {
+  font-family: 'MadeSans';
+  src: local('MadeSans'), url(./fonts/MADESansBold.otf) format('truetype');
+}

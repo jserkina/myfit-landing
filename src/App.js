@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Reset } from 'reset-css';
 import { ScrollingProvider, SectionLink, Section } from 'react-scroll-section';
 import ContactUs from './pages/ContactUs.js';
+import Banner from './pages/Banner.js';
 
 import Leaf from './icons/Leaf.svg';
 import Phone from './icons/Phone.svg';
@@ -30,6 +31,7 @@ export default class MyComponent extends Component {
     return (
       <S.Bg>
         <ScrollingProvider>
+          <Banner></Banner>
           <S.Main>
             <S.MenuImage src={MainPhoto} />
             <S.MenuBlock></S.MenuBlock>
