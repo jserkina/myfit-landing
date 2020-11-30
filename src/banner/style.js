@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { device } from './device.js';
 
 
 import {
@@ -7,7 +6,7 @@ import {
   WHITE,
   DARK_GREY,
   SOFT_ORANGE
-} from './colors.js'
+} from '../style/colors.js'
 
 export const Bg = styled.div`
   width: 948px;
@@ -77,10 +76,9 @@ export const Policy = styled.div`
   margin-top: 32px;
 `
 
-export const Checkbox = styled.input``
-
-export const PolicyText = styled.label`
+export const PolicyText = styled.span`
   font-size: 14px;
+  margin-left: 12px;
 `
 
 export const SignUp = styled.button`

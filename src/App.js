@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Reset } from 'reset-css';
 import { ScrollingProvider, SectionLink, Section } from 'react-scroll-section';
 import ContactUs from './pages/ContactUs.js';
-import Banner from './pages/Banner.js';
+import Banner from './banner/Banner.js';
 
 import Leaf from './icons/Leaf.svg';
 import Phone from './icons/Phone.svg';
