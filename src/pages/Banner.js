@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Reset } from 'reset-css';
 
 import Picture from '../icons/banner.png';
+import Close from '../icons/Close.png';
+
 
 import * as S from '../style/banner.js';
 
@@ -11,6 +13,7 @@ function Banner() {
       <S.Bg>
         <S.Image src={Picture} />
         <S.Block>
+          <S.Box src={Close} />
           <S.Head>get 20% off</S.Head>
           <S.Text>we are currently out of stock! sign up to our newsletter and receive 20% off your first order when we are re-stock</S.Text>
           <S.EmailBlock

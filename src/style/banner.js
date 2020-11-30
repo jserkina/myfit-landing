@@ -13,8 +13,8 @@ export const Bg = styled.div`
   width: 948px;
   height: 529px;
   background: ${WHITE};
-  position: fixed;
-  border: ${DARK_GREY} 9px solid;
+  border: ${BLACK} 2px solid;
+  outline: ${DARK_GREY} 9px solid;
   display: flex;
   font-family: 'MadeSans';
 
@@ -26,7 +26,7 @@ export const Image = styled.img`
 `
 
 export const Block = styled.div`
-  width: 560px;
+  width: 566px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -35,56 +35,64 @@ export const Block = styled.div`
   text-align: center;
   font-weight: bold;
 `
+export const Box = styled.img`
+  align-self: flex-end;
+  height: 34px;
+`
 
 export const Head = styled.h1`
-  font-size: 42px;
+  font-size: 58px;
+  margin-top: 41px;
 `
 
 export const Text = styled.p`
-  line-height: 30px;
-  font-size: 24px;
-  width: 77%;
+  line-height: 18px;
+  font-size: 16px;
+  width: 70%;
+  margin-top: 53px;
 `
 
 export const EmailBlock = styled.input`
   width: 330px;
   height: 50px;
   background: ${WHITE};
-  font-size: 22px;
-  line-height: 20px;
+  font-size: 16px;
   border: 3px ${BLACK} solid;
-  width: 70%;
   text-transform: uppercase;
   text-align: center;
   font-weight: bold;
   color: ${BLACK};
+  margin-top: 48px;
 
   ::placeholder,
   ::-webkit-input-placeholder {
     text-transform: uppercase;
     text-align: center;
-    font-weight: bold;
     color: ${BLACK};
+    font-family: 'MadeSans';
   }
 `
 
-export const Policy = styled.div``
+export const Policy = styled.div`
+  margin-top: 32px;
+`
 
 export const Checkbox = styled.input``
 
-export const PolicyText = styled.label``
+export const PolicyText = styled.label`
+  font-size: 14px;
+`
 
 export const SignUp = styled.button`
-  width: 245px;
+  width: 244px;
   height: 40px;
   text-transform: uppercase;
-  font-weight: bold;
-  font-size: 22px;
-  line-height: 24px;
+  font-size: 16px;
   color: ${WHITE};
   text-align: center;
   background: ${BLACK};
   border: none;
-  padding: 0px 16px;
   cursor: pointer;
+  margin-top: 30px;
+  font-family: 'MadeSans';
 `
