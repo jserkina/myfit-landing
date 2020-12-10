@@ -697,6 +697,8 @@ export const Container = styled.div`
   @media ${device.mobile} {
     flex-direction: column;
     flex-wrap: nowrap;
+    align-items: flex-start;
+    padding-left: 20px;
   }
 `
 
@@ -713,8 +715,10 @@ export const MenuFooter = styled.div`
   }
   @media ${device.mobile} {
     width: calc(100vw - 40px);
+    margin-left: 0px;
   }
 `
+
 export const FooterButton = styled(MenuButton)`
   color: ${WHITE};
   text-decoration: none;
@@ -725,6 +729,9 @@ export const Socials = styled.div`
   opacity: 0.8;
   display: flex;
   justify-content: space-between;
+  @media ${device.mobile} {
+    margin: 16px 0px;
+  }
 `
 
 export const FooterAddress = styled.p`
@@ -750,6 +757,9 @@ export const EmailBox = styled.div`
     width: 75%;
     margin-left: 20px;
     margin-top: 16px;
+  }
+  @media ${device.mobile} {
+    margin-left: 0px;
   }
 `
 export const EmailHead = styled.p`
