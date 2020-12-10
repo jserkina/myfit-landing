@@ -31,7 +31,7 @@ export default class MyComponent extends Component {
     return (
       <S.Bg>
         <ScrollingProvider>
-          <Banner></Banner>
+           {/*<Banner></Banner>*/}
           <S.Main>
             <S.MenuImage src={MainPhoto} />
             <S.MenuBlock></S.MenuBlock>
