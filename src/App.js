@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { Reset } from 'reset-css';
+import { Link } from "react-router-dom";
 import { ScrollingProvider, SectionLink, Section } from 'react-scroll-section';
-import ContactUs from './pages/ContactUs.js';
 import Banner from './banner/Banner.js';
 
 import Leaf from './icons/Leaf.svg';
@@ -26,8 +26,14 @@ import FullKit from './icons/FullKit.jpg';
 
 import * as S from './style/style.js';
 
-export default class MyComponent extends Component {
-  render() {
+export default function MyFit() {
+  const [email, setEmail] = useState('');
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    alert(`Your email: ${email}`);
+  }
+
     return (
       <S.Bg>
         <ScrollingProvider>
@@ -98,17 +104,17 @@ export default class MyComponent extends Component {
               </S.Caption>
               <S.Content>
                 <S.CardOne>
-                  <img src={Leaf} />
+                  <S.CardImg src={Leaf} />
                   <S.CardTextBold>Build muscle and shred fat from the comfort of your own home.</S.CardTextBold>
                   <S.CardText>The MYFIT resistance bands target isolated muscle groups to nurture growth whilst burning body fats. At your convenience.</S.CardText>
                 </S.CardOne>
                 <S.CardTwo>
-                  <img src={Phone} />
+                  <S.CardImg src={Phone} />
                   <S.CardTextBold>Exclusive app to help you achieve your goals. Whatever they may be.</S.CardTextBold>
                   <S.CardText>The MYFIT app has exercises curated by industry professionals for all muscle groups. Regularly updated by experts.</S.CardText>
                 </S.CardTwo>
                 <S.CardThree>
-                  <img src={Leaf} />
+                  <S.CardImg src={Leaf} />
                   <S.CardTextBold>MYFIT resistance bands are made from 100% natural latex. Naturally sourced.</S.CardTextBold>
                   <S.CardText>Our latex has origins from the highest quality source, the hevea brasiliensis tree. This ensures durability in strength, as well as flexibility.</S.CardText>
                 </S.CardThree>
@@ -178,11 +184,9 @@ export default class MyComponent extends Component {
                     Shop Now
                   </S.FooterButton>
                   <S.FooterButton>
-                    Contact
+                  <Link style={{ color: 'white', textDecoration: 'none' }} to="/contact_us">Contact</Link>
                   </S.FooterButton>
-                  <S.FooterButton>
-                    Terms and Privacy Policy
-                  </S.FooterButton>
+
                 </S.MenuFooter>
                 <S.Socials>
                   <a href='https://twitter.com/'>
@@ -205,8 +209,10 @@ export default class MyComponent extends Component {
                       id="email"
                       name="email"
                       placeholder='Enter your email'
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                     />
-                    <S.EmailButton onClick={alert}>Sign Up</S.EmailButton>
+                    <S.EmailButton onClick={handleSubmit}>Sign Up</S.EmailButton>
                   </div>
                 </S.EmailBox>
               </S.Container>
@@ -214,8 +220,6 @@ export default class MyComponent extends Component {
             </S.Footer>
           </Section>
         </ScrollingProvider>
-        {/*<ContactUs />*/}
       </S.Bg>
     );
-  }
 }

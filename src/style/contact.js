@@ -11,16 +11,32 @@ import {
 } from './colors.js'
 
 export const Bg = styled.div`
+  height: 100vh;
+  margin-left: 50px;
+  @media ${device.tablet} {
+    margin-left: 20px;
+  }
+`
+
+export const Main = styled.main`
   overflow: hidden;
   position: relative;
-  height: 970px;
+  height: 970px
 `
 
 export const ContactBox = styled.div`
-  width: 35%;
+  width: 40%;
   position: absolute;
-  margin-top: 100px;
-  margin-left: 160px;
+  margin-top: 60px;
+  margin-left: 200px;
+  @media ${device.laptop} {
+    width:auto;
+    margin-left: 110px;
+  }
+  @media ${device.mobile} {
+    margin-left: 0px;
+    width: 100vw;
+  }
 `
 
 export const Header = styled.h1`
@@ -30,6 +46,10 @@ export const Header = styled.h1`
   line-height: 60px;
   letter-spacing: 0.05em;
   color: ${BLACK};
+  @media ${device.laptop} {
+    font-size: 36px;
+    line-height: 48px;
+  }
 `
 export const HeadText = styled.h3`
   font-weight: bold;
@@ -38,10 +58,14 @@ export const HeadText = styled.h3`
   color: ${BLACK};
   margin-top: 24px;
   margin-bottom: 42px;
+  @media ${device.laptop} {
+    width:82%;
+  }
 `
 export const ContactForm = styled.form`
   display: flex;
   flex-direction: column;
+  width: 80%;
 `
 
 export const Input = styled.input`
@@ -49,7 +73,6 @@ export const Input = styled.input`
   font-size: 18px;
   line-height: 24px;
   border: none;
-  width: 80%;
   border-radius: 2px;
   height: 60px;
   padding-left: 16px;
@@ -61,7 +84,6 @@ export const Select = styled.select`
   font-size: 18px;
   line-height: 24px;
   border: none;
-  width: 83%;
   border-radius: 2px;
   height: 60px;
   padding-left: 16px;
@@ -75,7 +97,6 @@ export const TextArea = styled.textarea`
   font-size: 18px;
   line-height: 24px;
   border: none;
-  width: 80%;
   border-radius: 2px;
   height: 60px;
   padding-left: 16px;
@@ -103,125 +124,7 @@ export const FullKitStyle = styled.img`
   position: absolute;
   right: -415px;
   top: 278px;
-`
-
-export const Footer = styled.div`
-  background: #000000db;
-  width: 100vw;
-  padding-top: 76px;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  overflow: hidden;
-  @media ${device.mobile} {
-    padding: 24px 0px;
-  }
-`
-
-export const Container = styled.div`
-  display: flex;
-  align-items: center;
-  margin-bottom: 40px;
-  width: 100%;
-  justify-content: space-between;
   @media ${device.laptop} {
-    margin-bottom: 32px;
-  }
-  @media ${device.mobile} {
-    width: calc(100vw - 40px);
-  }
-`
-
-export const MenuFooter = styled.div`
-  display: flex;
-  color: ${WHITE};
-  flex-direction: column;
-  align-items: start;
-  margin-left: 40px;
-  height: 46px;
-  width: 80px;
-  justify-content: space-between;
-  @media ${device.tablet} {
-    margin-left: 20px;
-  }
-  @media ${device.mobile} {
-    width: calc(100vw - 40px);
-  }
-`
-
-export const MenuButton = styled.a`
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 18px;
-  cursor: pointer;
-`
-
-export const Socials = styled.div`
-  width: 128px;
-  opacity: 0.8;
-  display: flex;
-  justify-content: space-between;
-  @media ${device.tablet} {
-    flex-direction: column;
-    width: min-content;
-  }
-`
-
-export const FooterAddress = styled.p`
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 24px;
-  color: ${WHITE};
-  width: 222px;
-  margin: 0px 120px;
-  @media ${device.laptop} {
-    margin: 0px;
-  }
-`
-
-export const EmailBox = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 40%;
-  @media ${device.tablet} {
-    margin-right: 20px;
-  }
-`
-export const EmailHead = styled.p`
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 26px;
-  color: ${WHITE};
-`
-
-export const EmailText = styled.p`
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 18px;
-  color: ${WHITE};
-  margin: 8px 0px 20px;
-  width: 80%;
-`
-
-export const Email = styled.input`
-  background: #0000001c;
-  font-size: 14px;
-  line-height: 20px;
-  border-width: 1px 0px 1px 1px;
-  width: 70%;
-`
-
-export const EmailButton = styled.button`
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 24px;
-  color: ${BLACK};
-  text-align: center;
-  background: ${WHITE};
-  border: none;
-  padding: 0px 16px;
-  cursor: pointer;
-  @media ${device.mobile} {
-    margin-bottom: 42px;
+    display: none;
   }
 `

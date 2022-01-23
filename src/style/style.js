@@ -228,7 +228,7 @@ export const MainCTA = styled.div`
     align-self: center;
     text-align: center;
     align-items: center;
-    margin-top: 128px;
+    margin-top: 110px;
   }
   @media ${device.mobileS} {
     margin-top: 48px;
@@ -376,6 +376,10 @@ export const CardThree = styled(Card)`
   }
 `
 
+export const CardImg = styled.img`
+height: 37px;
+`
+
 export const CardTextBold = styled.p`
   font-weight: bold;
   font-size: 18px;
@@ -514,9 +518,8 @@ export const ProductText = styled.p`
     margin-top: 96px;
     width: 62%;
   }
-  @media ${device.mobileS} {
-    font-size: 14px;
-    line-height: 18px;
+  @media ${device.mobile} {
+    margin-top: 22px;
   }
 `
 
@@ -529,7 +532,7 @@ export const App = styled.div`
     padding: 80px 0px 80px;
   }
   @media ${device.mobile} {
-    padding: 40px 0px 21px;
+    padding: 0px 0px 21px;
   }
 `
 
@@ -540,7 +543,7 @@ export const AppImage = styled.img`
     margin-top: 80px;
   }
   @media ${device.mobile} {
-    margin-top: 16px;
+    margin-top: 24px;
   }
 `
 
@@ -678,7 +681,7 @@ export const Footer = styled.div`
   align-items: start;
   overflow: hidden;
   @media ${device.mobile} {
-
+    padding-top: 48px;
   }
 `
 
@@ -699,6 +702,7 @@ export const Container = styled.div`
     flex-wrap: nowrap;
     align-items: flex-start;
     padding-left: 20px;
+    margin-bottom: 0px;
   }
 `
 
@@ -706,8 +710,8 @@ export const MenuFooter = styled.div`
   display: flex;
   flex-direction: column;
   align-items: start;
-  margin-left: 40px;
-  height: 92px;
+  margin-left: 60px;
+  height: 46px;
   width: 160px;
   justify-content: space-between;
   @media ${device.tablet} {
@@ -756,10 +760,11 @@ export const EmailBox = styled.div`
   @media ${device.tablet} {
     width: 75%;
     margin-left: 20px;
-    margin-top: 16px;
+    margin-top: 24px;
   }
   @media ${device.mobile} {
     margin-left: 0px;
+    width: calc(100vw - 20px);
   }
 `
 export const EmailHead = styled.p`
@@ -782,7 +787,8 @@ export const Email = styled.input`
   background: #0000001c;
   font-size: 14px;
   line-height: 20px;
-  border-width: 1px 0px 1px 1px;
+  border-width: 0px;
+  padding: 4px;
   width: 70%;
 `
 
@@ -794,7 +800,7 @@ export const EmailButton = styled.button`
   text-align: center;
   background: ${WHITE};
   border: none;
-  padding: 0px 16px;
+  padding: 2px 16px;
   cursor: pointer;
   @media ${device.mobile} {
     margin-bottom: 42px;

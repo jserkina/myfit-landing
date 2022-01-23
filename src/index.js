@@ -2,13 +2,24 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import ContactUs from './pages/contact_us.js';
 import './fonts/Futura-Heavy.ttf'
 import './fonts/Futura-medium.ttf'
 import * as serviceWorker from './serviceWorker';
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/contact_us" element={<ContactUs />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
